@@ -1,0 +1,43 @@
+{
+  "entities": {
+    "UserProfile": {
+      "collection": "users",
+      "fields": {
+        "id": { "type": "string", "description": "User UID matching auth.uid" },
+        "username": { "type": "string", "description": "Username or student code in lowercase" },
+        "email": { "type": "string", "description": "Email address for Firebase Auth" },
+        "fullName": { "type": "string", "description": "Full display name" },
+        "role": { "type": "string", "description": "GVCN, STUDENT, or PARENT" },
+        "position": { "type": "string", "description": "Student position in class" },
+        "teamId": { "type": "number", "description": "Team ID (1-4)" },
+        "studentId": { "type": "string", "description": "Linked student ID if applicable" },
+        "phone": { "type": "string", "description": "Contact phone number" },
+        "avatar": { "type": "string", "description": "Avatar image URL" },
+        "createdAt": { "type": "string", "description": "Creation timestamp" },
+        "updatedAt": { "type": "string", "description": "Update timestamp" }
+      }
+    },
+    "Student": {
+      "collection": "students",
+      "fields": {
+        "id": { "type": "string", "description": "Student ID" },
+        "code": { "type": "string", "description": "Student code e.g. 2411A801" },
+        "fullName": { "type": "string", "description": "Student full name" },
+        "gender": { "type": "string", "description": "Nam or Nu" },
+        "dob": { "type": "string", "description": "Date of birth" },
+        "address": { "type": "string", "description": "Home address" },
+        "phone": { "type": "string", "description": "Phone number" },
+        "teamId": { "type": "number", "description": "Team ID (1-4)" },
+        "position": { "type": "string", "description": "Position in class" },
+        "parentName": { "type": "string", "description": "Parent full name" },
+        "parentPhone": { "type": "string", "description": "Parent phone" },
+        "parentRelationship": { "type": "string", "description": "Relationship" },
+        "vocationalCourse": { "type": "string", "description": "Vocational trade" },
+        "baseScore": { "type": "number", "description": "Base emulation score" },
+        "currentScore": { "type": "number", "description": "Current emulation score" },
+        "avatar": { "type": "string", "description": "Avatar URL" },
+        "notes": { "type": "string", "description": "Notes" }
+      }
+    }
+  }
+}

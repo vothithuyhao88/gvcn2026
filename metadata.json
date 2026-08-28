@@ -1,0 +1,10 @@
+{
+  "name": "chủ nhiêm năm học: 2026-2027",
+  "description": "Hệ thống quản lý lớp chủ nhiệm 11A3: Kết nối \u0026 Trưởng thành - GVCN Võ Thị Thúy Hào (Trung tâm GDNN-GDTX An Nhơn), hỗ trợ phân quyền GVCN, Ban cán sự, Tổ trưởng, Học sinh, Phụ huynh và Trợ lý AI.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
