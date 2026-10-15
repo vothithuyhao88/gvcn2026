@@ -23,7 +23,7 @@ export interface ParsedStudentRow {
 }
 
 /**
- * Generates and downloads the official Excel template for Class 11A3 students
+ * Generates and downloads the official Excel template for Class 12A2 students
  */
 export function downloadStudentExcelTemplate() {
   const headers = [
@@ -44,16 +44,16 @@ export function downloadStudentExcelTemplate() {
   ];
 
   const sampleRows = [
-    [1, '11A3-01', 'Nguyễn Văn An', 'Nam', '2009-03-15', 1, 'LỚP TRƯỞNG', 'Hàn', '0912345678', 'Nguyễn Văn Bình', '0987654321', 'Bố', 'Phường Bình Định, TX. An Nhơn', 'Học sinh gương mẫu'],
-    [2, '11A3-02', 'Lê Thị Mai Phương', 'Nữ', '2009-07-20', 2, 'LỚP PHÓ HỌC TẬP', 'Kế toán', '0923456789', 'Lê Văn Cường', '0978123456', 'Bố', 'Phường Đập Đá, TX. An Nhơn', 'Cán sự học tập năng nổ'],
-    [3, '11A3-03', 'Trần Quốc Bảo', 'Nam', '2009-11-05', 3, 'THÀNH VIÊN', 'Hàn', '0934567890', 'Trần Thị Dung', '0965432198', 'Mẹ', 'Xã Nhơn An, TX. An Nhơn', ''],
-    [4, '11A3-04', 'Phạm Hoàng Nam', 'Nam', '2009-02-18', 1, 'TỔ TRƯỞNG TỔ 1', 'Hàn', '0945678901', 'Phạm Văn Em', '0954321987', 'Bố', 'Xã Nhơn Hạnh, TX. An Nhơn', ''],
-    [5, '11A3-05', 'Nguyễn Thị Thảo Nguyên', 'Nữ', '2009-09-12', 2, 'TỔ TRƯỞNG TỔ 2', 'Kế toán', '0956789012', 'Nguyễn Văn Phúc', '0943219876', 'Bố', 'Phường Nhơn Hòa, TX. An Nhơn', '']
+    [1, '12A2-01', 'Nguyễn Văn An', 'Nam', '2009-03-15', 1, 'LỚP TRƯỞNG', 'Hàn', '0912345678', 'Nguyễn Văn Bình', '0987654321', 'Bố', 'Phường Bình Định, TX. An Nhơn', 'Học sinh gương mẫu'],
+    [2, '12A2-02', 'Lê Thị Mai Phương', 'Nữ', '2009-07-20', 2, 'LỚP PHÓ HỌC TẬP', 'Kế toán', '0923456789', 'Lê Văn Cường', '0978123456', 'Bố', 'Phường Đập Đá, TX. An Nhơn', 'Cán sự học tập năng nổ'],
+    [3, '12A2-03', 'Trần Quốc Bảo', 'Nam', '2009-11-05', 3, 'THÀNH VIÊN', 'Hàn', '0934567890', 'Trần Thị Dung', '0965432198', 'Mẹ', 'Xã Nhơn An, TX. An Nhơn', ''],
+    [4, '12A2-04', 'Phạm Hoàng Nam', 'Nam', '2009-02-18', 1, 'TỔ TRƯỞNG TỔ 1', 'Hàn', '0945678901', 'Phạm Văn Em', '0954321987', 'Bố', 'Xã Nhơn Hạnh, TX. An Nhơn', ''],
+    [5, '12A2-05', 'Nguyễn Thị Thảo Nguyên', 'Nữ', '2009-09-12', 2, 'TỔ TRƯỞNG TỔ 2', 'Kế toán', '0956789012', 'Nguyễn Văn Phúc', '0943219876', 'Bố', 'Phường Nhơn Hòa, TX. An Nhơn', '']
   ];
 
   const wsData = [
     ['TRUNG TÂM GDNN - GDTX THỊ XÃ AN NHƠN - TỈNH BÌNH ĐỊNH'],
-    ['FILE MẪU NHẬP DANH SÁCH HỌC SINH LỚP 11A3 (NIÊN KHÓA 2025–2028)'],
+    ['FILE MẪU NHẬP DANH SÁCH HỌC SINH LỚP 12A2 (NIÊN KHÓA 2024–2027)'],
     ['GVCN: Võ Thị Thúy Hào • SĐT: 0932556039 • Khẩu hiệu: Đoàn Kết & Chia Sẻ'],
     ['(Lưu ý: Các cột có dấu (*) là bắt buộc. Nghề học: Nam học Hàn, Nữ học Kế toán. Tổ từ 1 đến 4)'],
     [], // empty line
@@ -82,15 +82,15 @@ export function downloadStudentExcelTemplate() {
   ];
 
   const wb = XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(wb, ws, 'Mau_Nhap_Hoc_Sinh_11A3');
+  XLSX.utils.book_append_sheet(wb, ws, 'Mau_Nhap_Hoc_Sinh_12A2');
 
-  XLSX.writeFile(wb, 'File_Mau_Nhap_Hoc_Sinh_Lop_11A3.xlsx');
+  XLSX.writeFile(wb, 'File_Mau_Nhap_Hoc_Sinh_Lop_12A2.xlsx');
 }
 
 /**
  * Exports current student data to a beautifully formatted Excel file
  */
-export function exportStudentsToExcel(studentsList: Student[], fileNamePrefix = 'Danh_Sach_Hoc_Sinh_Lop_11A3') {
+export function exportStudentsToExcel(studentsList: Student[], fileNamePrefix = 'Danh_Sach_Hoc_Sinh_Lop_12A2') {
   const headers = [
     'STT',
     'Mã học sinh',
@@ -139,7 +139,7 @@ export function exportStudentsToExcel(studentsList: Student[], fileNamePrefix = 
 
   const wsData = [
     ['TRUNG TÂM GDNN - GDTX THỊ XÃ AN NHƠN'],
-    ['LỚP 11A3 • NIÊN KHÓA 2025–2028 • ĐOÀN KẾT VÀ CHIA SẺ'],
+    ['LỚP 12A2 • NIÊN KHÓA 2024–2027 • ĐOÀN KẾT VÀ CHIA SẺ'],
     [`DANH SÁCH HỌC SINH (Tổng số: ${studentsList.length} học sinh) - Xuất ngày: ${dateStr}`],
     ['Giáo viên chủ nhiệm: Cô Võ Thị Thúy Hào • SĐT: 0932556039'],
     [],
@@ -170,7 +170,7 @@ export function exportStudentsToExcel(studentsList: Student[], fileNamePrefix = 
   ];
 
   const wb = XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(wb, ws, 'Danh_Sach_11A3');
+  XLSX.utils.book_append_sheet(wb, ws, 'Danh_Sach_12A2');
 
   const fileDate = `${now.getFullYear()}${(now.getMonth() + 1).toString().padStart(2, '0')}${now.getDate().toString().padStart(2, '0')}`;
   XLSX.writeFile(wb, `${fileNamePrefix}_${fileDate}.xlsx`);
@@ -179,7 +179,7 @@ export function exportStudentsToExcel(studentsList: Student[], fileNamePrefix = 
 /**
  * Exports Student, Cadre and Parent Accounts List matching the exact orange table format in requirements
  */
-export function exportAccountListToExcel(studentsList: Student[], fileNamePrefix = 'Danh_Sach_Cap_Tai_Khoan_11A3') {
+export function exportAccountListToExcel(studentsList: Student[], fileNamePrefix = 'Danh_Sach_Cap_Tai_Khoan_12A2') {
   const headers = [
     'STT',
     'HoTen',
@@ -213,7 +213,7 @@ export function exportAccountListToExcel(studentsList: Student[], fileNamePrefix
 
   const wsData = [
     ['TRUNG TÂM GDNN - GDTX THỊ XÃ AN NHƠN - TỈNH BÌNH ĐỊNH'],
-    ['BẢNG CẤP TÀI KHOẢN HỌC SINH, CÁN SỰ & PHỤ HUYNH LỚP 11A3 (2026–2027)'],
+    ['BẢNG CẤP TÀI KHOẢN HỌC SINH, CÁN SỰ & PHỤ HUYNH LỚP 12A2 (2026–2027)'],
     [`GVCN: Cô Võ Thị Thúy Hào • Tên đăng nhập GVCN: thuyhao | Mật khẩu: thuyhao88 • Xuất ngày: ${dateStr}`],
     ['(Ghi chú: Học sinh & Cán sự đăng nhập bằng Mã học sinh và MatKhauHS; Phụ huynh đăng nhập bằng Mã học sinh của con và MatKhauPH)'],
     [],
@@ -234,7 +234,7 @@ export function exportAccountListToExcel(studentsList: Student[], fileNamePrefix
   ];
 
   const wb = XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(wb, ws, 'Cap_Tai_Khoan_11A3');
+  XLSX.utils.book_append_sheet(wb, ws, 'Cap_Tai_Khoan_12A2');
 
   const fileDate = `${now.getFullYear()}${(now.getMonth() + 1).toString().padStart(2, '0')}${now.getDate().toString().padStart(2, '0')}`;
   XLSX.writeFile(wb, `${fileNamePrefix}_${fileDate}.xlsx`);

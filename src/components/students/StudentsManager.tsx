@@ -120,17 +120,17 @@ export const StudentsManager: React.FC = () => {
   // Excel import handler
   const handleBatchImportComplete = (importedRows: ParsedStudentRow[], mode: 'append' | 'replace') => {
     batchImportStudents(importedRows, mode);
-    showToast(`Đã nhập thành công ${importedRows.length} học sinh vào hệ thống Lớp 11A3!`);
+    showToast(`Đã nhập thành công ${importedRows.length} học sinh vào hệ thống Lớp 12A2!`);
   };
 
   // Excel export handlers
   const handleExportAll = () => {
-    exportStudentsToExcel(students, 'Danh_Sach_Hoc_Sinh_Lop_11A3_Tat_Ca');
+    exportStudentsToExcel(students, 'Danh_Sach_Hoc_Sinh_Lop_12A2_Tat_Ca');
     showToast(`Đã xuất file Excel ${students.length} học sinh thành công!`);
   };
 
   const handleExportFiltered = () => {
-    exportStudentsToExcel(filteredStudents, 'Danh_Sach_Hoc_Sinh_Lop_11A3_Bo_Loc');
+    exportStudentsToExcel(filteredStudents, 'Danh_Sach_Hoc_Sinh_Lop_12A2_Bo_Loc');
     showToast(`Đã xuất file Excel ${filteredStudents.length} học sinh theo bộ lọc!`);
   };
   
@@ -141,7 +141,7 @@ export const StudentsManager: React.FC = () => {
   // Add student form state
   const [newStudentData, setNewStudentData] = useState<Omit<Student, 'id' | 'currentScore' | 'baseScore'>>({
     fullName: '',
-    code: `11A3-${String(students.length + 1).padStart(2, '0')}`,
+    code: `12A2-${String(students.length + 1).padStart(2, '0')}`,
     gender: 'Nam',
     dob: '2009-01-01',
     teamId: 1,
@@ -205,13 +205,13 @@ export const StudentsManager: React.FC = () => {
 
     addStudent(newStudentData);
     setIsAddModalOpen(false);
-    showToast(`Đã thêm mới học sinh: ${newStudentData.fullName} vào danh sách Lớp 11A3`);
+    showToast(`Đã thêm mới học sinh: ${newStudentData.fullName} vào danh sách Lớp 12A2`);
     
     // Reset add form
     const nextNum = students.length + 2;
     setNewStudentData({
       fullName: '',
-      code: `11A3-${String(nextNum).padStart(2, '0')}`,
+      code: `12A2-${String(nextNum).padStart(2, '0')}`,
       gender: 'Nam',
       dob: '2009-01-01',
       teamId: 1,
@@ -279,7 +279,7 @@ export const StudentsManager: React.FC = () => {
         <div>
           <div className="flex items-center gap-2 text-xs font-bold text-blue-700 uppercase tracking-wider mb-1">
             <Users className="w-4 h-4" />
-            <span>Hồ Sơ & Danh Sách Học Sinh • Lớp 11A3 (2026–2027)</span>
+            <span>Hồ Sơ & Danh Sách Học Sinh • Lớp 12A2 (2026–2027)</span>
           </div>
           <h1 className="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2.5 flex-wrap">
             <span>Quản Lý {students.length} Học Sinh</span>
@@ -317,7 +317,7 @@ export const StudentsManager: React.FC = () => {
             onClick={downloadStudentExcelTemplate}
             id="btn-download-template"
             className="bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold px-3.5 py-2.5 rounded-2xl text-xs border border-slate-200 shadow-2xs transition flex items-center gap-1.5 shrink-0 cursor-pointer"
-            title="Tải file Excel mẫu chuẩn 11A3 về máy"
+            title="Tải file Excel mẫu chuẩn 12A2 về máy"
           >
             <Download className="w-4 h-4 text-emerald-600" />
             <span className="hidden sm:inline">Tải</span> <span>File Mẫu Excel</span>
@@ -355,7 +355,7 @@ export const StudentsManager: React.FC = () => {
               onClick={() => setIsExportDropdownOpen(!isExportDropdownOpen)}
               id="btn-export-excel"
               className="bg-teal-700 hover:bg-teal-800 text-white font-bold px-3.5 py-2.5 rounded-2xl text-xs shadow-md transition flex items-center gap-1.5 shrink-0 cursor-pointer"
-              title="Xuất dữ liệu học sinh lớp 11A3 ra file Excel"
+              title="Xuất dữ liệu học sinh lớp 12A2 ra file Excel"
             >
               <FileSpreadsheet className="w-4 h-4" />
               <span>Xuất DL Excel</span>
@@ -416,7 +416,7 @@ export const StudentsManager: React.FC = () => {
             👥
           </div>
           <div>
-            <div className="text-[11px] text-slate-400 font-bold uppercase">Sĩ số Lớp 11A3</div>
+            <div className="text-[11px] text-slate-400 font-bold uppercase">Sĩ số Lớp 12A2</div>
             <div className="text-lg font-black text-slate-900">{students.length} học sinh</div>
           </div>
         </div>
@@ -1173,7 +1173,7 @@ export const StudentsManager: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => {
-                    if (confirm(`Bạn có chắc chắn muốn xóa học sinh "${editingStudent.fullName}" (${editingStudent.code}) khỏi danh sách Lớp 11A3?`)) {
+                    if (confirm(`Bạn có chắc chắn muốn xóa học sinh "${editingStudent.fullName}" (${editingStudent.code}) khỏi danh sách Lớp 12A2?`)) {
                       deleteStudent(editingStudent.id);
                       if (viewingStudent && viewingStudent.id === editingStudent.id) {
                         setViewingStudent(null);
@@ -1225,7 +1225,7 @@ export const StudentsManager: React.FC = () => {
                   <Plus className="w-5 h-5 stroke-[3]" />
                 </div>
                 <div>
-                  <h3 className="font-black text-slate-900 text-lg">Thêm Học Sinh Mới Vào Lớp 11A3</h3>
+                  <h3 className="font-black text-slate-900 text-lg">Thêm Học Sinh Mới Vào Lớp 12A2</h3>
                   <p className="text-xs text-slate-500">Năm học 2026–2027 • GVCN Võ Thị Thúy Hào</p>
                 </div>
               </div>

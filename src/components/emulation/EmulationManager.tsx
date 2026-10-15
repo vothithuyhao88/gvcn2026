@@ -139,7 +139,7 @@ export const EmulationManager: React.FC = () => {
 
   // Reset to default
   const handleResetDefaults = () => {
-    if (confirm('Khôi phục danh sách về 20 tiêu chí quy định chuẩn mặc định của lớp 11A3?')) {
+    if (confirm('Khôi phục danh sách về 20 tiêu chí quy định chuẩn mặc định của lớp 12A2?')) {
       resetCriteriaToDefault();
       showToast('Đã khôi phục bảng 20 tiêu chí chuẩn mặc định.');
     }
@@ -190,7 +190,7 @@ export const EmulationManager: React.FC = () => {
         <div>
           <div className="flex items-center gap-2 text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">
             <Award className="w-4 h-4" />
-            <span>Thang Điểm Thi Đua & Xếp Loại Lớp 11A3 (2026–2027)</span>
+            <span>Thang Điểm Thi Đua & Xếp Loại Lớp 12A2 (2026–2027)</span>
           </div>
           <h1 className="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2">
             <span>Quản Lý Chỉ Tiêu Khen Thưởng & Xếp Loại</span>
@@ -233,7 +233,7 @@ export const EmulationManager: React.FC = () => {
         <div className="flex items-center gap-2 mb-3">
           <Sparkles className="w-4 h-4 text-amber-500" />
           <h3 className="font-bold text-slate-900 text-xs uppercase tracking-wider">
-            Quy định Thang Điểm 100 & Phân Loại Thi Đua Lớp 11A3
+            Quy định Thang Điểm 100 & Phân Loại Thi Đua Lớp 12A2
           </h3>
         </div>
 
@@ -395,7 +395,7 @@ export const EmulationManager: React.FC = () => {
                         </button>
                       </div>
                     ) : (
-                      <span className="text-[10px] text-slate-400">Quy định 11A3</span>
+                      <span className="text-[10px] text-slate-400">Quy định 12A2</span>
                     )}
                   </div>
                 </div>
@@ -529,7 +529,7 @@ export const EmulationManager: React.FC = () => {
                   <h3 className="font-black text-slate-900 text-base">
                     {editingCriteria ? 'Chỉnh Sửa Tiêu Chí Thi Đua' : 'Thêm Tiêu Chí Thi Đua Mới'}
                   </h3>
-                  <p className="text-xs text-slate-500">Giáo viên chủ nhiệm thiết lập thang điểm 11A3</p>
+                  <p className="text-xs text-slate-500">Giáo viên chủ nhiệm thiết lập thang điểm 12A2</p>
                 </div>
               </div>
               <button

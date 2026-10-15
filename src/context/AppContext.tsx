@@ -103,7 +103,8 @@ interface AppContextType {
   // Moments
   toggleLikeMoment: (momentId: string) => void;
   addMomentComment: (momentId: string, content: string) => void;
-  addMoment: (title: string, description: string, imageUrl: string) => void;
+  addMoment: (title: string, description: string, imageUrl: string, date?: string) => void;
+  deleteMoment: (momentId: string) => void;
   
   // Documents
   addDocument: (doc: Omit<ClassDocument, 'id' | 'uploadedAt'>) => void;
@@ -122,24 +123,24 @@ interface AppContextType {
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 const STORAGE_KEYS = {
-  USER: '11A3_CURRENT_USER',
-  STUDENTS: '11A3_STUDENTS',
-  SUBMISSIONS: '11A3_SUBMISSIONS',
-  ATTENDANCE: '11A3_ATTENDANCE',
-  ANNOUNCEMENTS: '11A3_ANNOUNCEMENTS',
-  DIARIES: '11A3_DIARIES',
-  MOMENTS: '11A3_MOMENTS',
-  DOCUMENTS: '11A3_DOCUMENTS',
-  SCHEDULE: '11A3_SCHEDULE',
-  LEAVE_REQUESTS: '11A3_LEAVE_REQUESTS',
-  CRITERIA: '11A3_CRITERIA',
-  TEACHER_CREDENTIALS: '11A3_GVCN_CREDENTIALS',
+  USER: '12A2_CURRENT_USER',
+  STUDENTS: '12A2_STUDENTS',
+  SUBMISSIONS: '12A2_SUBMISSIONS',
+  ATTENDANCE: '12A2_ATTENDANCE',
+  ANNOUNCEMENTS: '12A2_ANNOUNCEMENTS',
+  DIARIES: '12A2_DIARIES',
+  MOMENTS: '12A2_MOMENTS',
+  DOCUMENTS: '12A2_DOCUMENTS',
+  SCHEDULE: '12A2_SCHEDULE',
+  LEAVE_REQUESTS: '12A2_LEAVE_REQUESTS',
+  CRITERIA: '12A2_CRITERIA',
+  TEACHER_CREDENTIALS: '12A2_GVCN_CREDENTIALS',
 };
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // GVCN Credentials
   const [teacherCredentials, setTeacherCredentials] = useState<{ username: string; password: string }>(() => {
-    const saved = localStorage.getItem(STORAGE_KEYS.TEACHER_CREDENTIALS);
+    const saved = localStorage.getItem(STORAGE_KEYS.TEACHER_CREDENTIALS) || localStorage.getItem('11A3_GVCN_CREDENTIALS');
     if (saved) {
       try { return JSON.parse(saved); } catch (e) { /* fallback */ }
     }
@@ -148,7 +149,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   // Initialize user
   const [currentUser, setCurrentUser] = useState<User>(() => {
-    const saved = localStorage.getItem(STORAGE_KEYS.USER);
+    const saved = localStorage.getItem(STORAGE_KEYS.USER) || localStorage.getItem('11A3_CURRENT_USER');
     if (saved) {
       try { return JSON.parse(saved); } catch (e) { /* fallback */ }
     }
@@ -157,15 +158,24 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   // Students
   const [students, setStudents] = useState<Student[]>(() => {
-    const saved = localStorage.getItem(STORAGE_KEYS.STUDENTS);
+    const saved = localStorage.getItem(STORAGE_KEYS.STUDENTS) || localStorage.getItem('11A3_STUDENTS');
     if (saved) {
       try { 
         const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed) && parsed.length >= INITIAL_STUDENTS.length) {
-          // Normalize vocationalCourse and ensure default passwords exist
-          return parsed.map((s: Student, idx: number) => {
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          // If any students from INITIAL_STUDENTS (such as student 42) are missing, merge them
+          const existingIds = new Set(parsed.map((s: Student) => s.id));
+          const missing = INITIAL_STUDENTS.filter(s => !existingIds.has(s.id));
+          const combined = [...parsed, ...missing];
+
+          // Normalize vocationalCourse, update class code to 12A2 and ensure default passwords exist
+          return combined.map((s: Student, idx: number) => {
+            const normalizedCode = s.code 
+              ? s.code.replace('11A3', '12A2').replace('11a3', '12a2') 
+              : `12A2-${String(idx + 1).padStart(2, '0')}`;
             return {
               ...s,
+              code: normalizedCode,
               studentPassword: s.studentPassword || '123456',
               parentPassword: s.parentPassword || '123456',
               vocationalCourse: (s.vocationalCourse === 'Hàn' || s.vocationalCourse === 'Kế toán') 
@@ -185,7 +195,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   // Submissions
   const [submissions, setSubmissions] = useState<WeeklyTeamSubmission[]>(() => {
-    const saved = localStorage.getItem(STORAGE_KEYS.SUBMISSIONS);
+    const saved = localStorage.getItem(STORAGE_KEYS.SUBMISSIONS) || localStorage.getItem('11A3_SUBMISSIONS');
     if (saved) {
       try { return JSON.parse(saved); } catch (e) { /* fallback */ }
     }
@@ -194,7 +204,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   // Attendance Records (Generate default today's attendance if empty)
   const [attendanceRecords, setAttendanceRecords] = useState<AttendanceRecord[]>(() => {
-    const saved = localStorage.getItem(STORAGE_KEYS.ATTENDANCE);
+    const saved = localStorage.getItem(STORAGE_KEYS.ATTENDANCE) || localStorage.getItem('11A3_ATTENDANCE');
     if (saved) {
       try { return JSON.parse(saved); } catch (e) { /* fallback */ }
     }
@@ -216,7 +226,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   // Announcements
   const [announcements, setAnnouncements] = useState<Announcement[]>(() => {
-    const saved = localStorage.getItem(STORAGE_KEYS.ANNOUNCEMENTS);
+    const saved = localStorage.getItem(STORAGE_KEYS.ANNOUNCEMENTS) || localStorage.getItem('11A3_ANNOUNCEMENTS');
     if (saved) {
       try { return JSON.parse(saved); } catch (e) { /* fallback */ }
     }
@@ -225,7 +235,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   // Diaries
   const [diaries, setDiaries] = useState<HomeroomDiary[]>(() => {
-    const saved = localStorage.getItem(STORAGE_KEYS.DIARIES);
+    const saved = localStorage.getItem(STORAGE_KEYS.DIARIES) || localStorage.getItem('11A3_DIARIES');
     if (saved) {
       try { return JSON.parse(saved); } catch (e) { /* fallback */ }
     }
@@ -234,7 +244,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   // Moments
   const [moments, setMoments] = useState<ClassMoment[]>(() => {
-    const saved = localStorage.getItem(STORAGE_KEYS.MOMENTS);
+    const saved = localStorage.getItem(STORAGE_KEYS.MOMENTS) || localStorage.getItem('11A3_MOMENTS');
     if (saved) {
       try { return JSON.parse(saved); } catch (e) { /* fallback */ }
     }
@@ -243,7 +253,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   // Documents
   const [documents, setDocuments] = useState<ClassDocument[]>(() => {
-    const saved = localStorage.getItem(STORAGE_KEYS.DOCUMENTS);
+    const saved = localStorage.getItem(STORAGE_KEYS.DOCUMENTS) || localStorage.getItem('11A3_DOCUMENTS');
     if (saved) {
       try { return JSON.parse(saved); } catch (e) { /* fallback */ }
     }
@@ -252,7 +262,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   // Duty Schedule
   const [dutySchedule, setDutySchedule] = useState<DutySchedule[]>(() => {
-    const saved = localStorage.getItem(STORAGE_KEYS.SCHEDULE);
+    const saved = localStorage.getItem(STORAGE_KEYS.SCHEDULE) || localStorage.getItem('11A3_SCHEDULE');
     if (saved) {
       try { return JSON.parse(saved); } catch (e) { /* fallback */ }
     }
@@ -261,7 +271,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   // Leave Requests
   const [leaveRequests, setLeaveRequests] = useState<LeaveRequest[]>(() => {
-    const saved = localStorage.getItem(STORAGE_KEYS.LEAVE_REQUESTS);
+    const saved = localStorage.getItem(STORAGE_KEYS.LEAVE_REQUESTS) || localStorage.getItem('11A3_LEAVE_REQUESTS');
     if (saved) {
       try { return JSON.parse(saved); } catch (e) { /* fallback */ }
     }
@@ -270,7 +280,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   // Criteria
   const [criteria, setCriteria] = useState<CriteriaRule[]>(() => {
-    const saved = localStorage.getItem(STORAGE_KEYS.CRITERIA);
+    const saved = localStorage.getItem(STORAGE_KEYS.CRITERIA) || localStorage.getItem('11A3_CRITERIA');
     if (saved) {
       try { return JSON.parse(saved); } catch (e) { /* fallback */ }
     }
@@ -450,14 +460,14 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       await batchSaveToFirestore(COLLECTIONS.LEAVE_REQUESTS, leaveRequests);
       await batchSaveToFirestore(COLLECTIONS.CRITERIA, criteria);
       await saveDocumentToFirestore(COLLECTIONS.SETTINGS, {
-        id: 'class_11a3_config',
+        id: 'class_12a2_config',
         teacherCredentials,
         updatedAt: new Date().toISOString(),
       });
       setIsFirestoreLive(true);
       return { 
         success: true, 
-        message: 'Đã đồng bộ toàn bộ 41 học sinh & dữ liệu lớp 11A3 lên dự án Firebase gvcn20262027 thành công!' 
+        message: 'Đã đồng bộ toàn bộ 42 học sinh & dữ liệu lớp 12A2 lên dự án Firebase gvcn20262027 thành công!' 
       };
     } catch (err: any) {
       return { success: false, message: `Lỗi đồng bộ Firestore: ${err.message}` };
@@ -468,7 +478,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const updateTeacherCredentials = (username: string, password: string) => {
     setTeacherCredentials({ username, password });
     saveDocumentToFirestore(COLLECTIONS.SETTINGS, {
-      id: 'class_11a3_config',
+      id: 'class_12a2_config',
       teacherCredentials: { username, password },
       updatedAt: new Date().toISOString(),
     });
@@ -507,8 +517,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     batchSaveToFirestore(COLLECTIONS.STUDENTS, updated);
   };
 
-  // Batch generate / normalize student codes (e.g. 2411A801 -> 2411A841)
-  const batchGenerateStudentCodes = (prefix = '2411A8') => {
+  // Batch generate / normalize student codes (e.g. 12A2-01 -> 12A2-42)
+  const batchGenerateStudentCodes = (prefix = '12A2-') => {
     const updated = students.map((s, idx) => ({
       ...s,
       code: `${prefix}${String(idx + 1).padStart(2, '0')}`,
@@ -548,7 +558,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         
         let customAvatar = gvcnUser.avatar;
         try {
-          const userAvatarsRaw = localStorage.getItem('11A3_USER_AVATARS');
+          const userAvatarsRaw = localStorage.getItem('12A2_USER_AVATARS') || localStorage.getItem('11A3_USER_AVATARS');
           if (userAvatarsRaw) {
             const userAvatars = JSON.parse(userAvatarsRaw);
             if (userAvatars[gvcnUser.id]) customAvatar = userAvatars[gvcnUser.id];
@@ -582,6 +592,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
                sId === cleanInput ||
                cleanInput === `hs-${s.code.toLowerCase()}` ||
                cleanInput === `2411a8${s.code.replace(/[^0-9]/g, '')}` ||
+               cleanInput === `12a2-${s.code.replace(/[^0-9]/g, '')}` ||
                cleanInput === `11a3-${s.code.replace(/[^0-9]/g, '')}`;
       }) || DEMO_USERS.find(u => u.username?.toLowerCase() === cleanInput && u.studentId)?.studentId 
          ? students.find(s => s.id === DEMO_USERS.find(u => u.username?.toLowerCase() === cleanInput)?.studentId)
@@ -605,7 +616,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       // Check custom avatar
       let customAvatar = student.avatar;
       try {
-        const userAvatarsRaw = localStorage.getItem('11A3_USER_AVATARS');
+        const userAvatarsRaw = localStorage.getItem('12A2_USER_AVATARS') || localStorage.getItem('11A3_USER_AVATARS');
         if (userAvatarsRaw) {
           const userAvatars = JSON.parse(userAvatarsRaw);
           if (userAvatars[student.id]) customAvatar = userAvatars[student.id];
@@ -647,6 +658,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
                sId === cleanInput ||
                cleanInput === `hs-${s.code.toLowerCase()}` ||
                cleanInput === `2411a8${s.code.replace(/[^0-9]/g, '')}` ||
+               cleanInput === `12a2-${s.code.replace(/[^0-9]/g, '')}` ||
                cleanInput === `11a3-${s.code.replace(/[^0-9]/g, '')}`;
       });
 
@@ -726,7 +738,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       const gvcnUser = DEMO_USERS.find(u => u.role === 'GVCN') || DEMO_USERS[0];
       let customAvatar = gvcnUser.avatar;
       try {
-        const userAvatarsRaw = localStorage.getItem('11A3_USER_AVATARS');
+        const userAvatarsRaw = localStorage.getItem('12A2_USER_AVATARS') || localStorage.getItem('11A3_USER_AVATARS');
         if (userAvatarsRaw) {
           const userAvatars = JSON.parse(userAvatarsRaw);
           if (userAvatars[gvcnUser.id]) customAvatar = userAvatars[gvcnUser.id];
@@ -757,6 +769,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
              sId === cleanId ||
              cleanId === `hs-${s.code.toLowerCase()}` ||
              cleanId === `2411a8${s.code.replace(/[^0-9]/g, '')}` ||
+             cleanId === `12a2-${s.code.replace(/[^0-9]/g, '')}` ||
              cleanId === `11a3-${s.code.replace(/[^0-9]/g, '')}`;
     }) || (DEMO_USERS.find(u => u.username?.toLowerCase() === cleanId && u.studentId)
           ? students.find(s => s.id === DEMO_USERS.find(u => u.username?.toLowerCase() === cleanId)?.studentId)
@@ -767,7 +780,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       if (cleanPass === expectedPass || cleanPass === '123456') {
         let customAvatar = student.avatar;
         try {
-          const userAvatarsRaw = localStorage.getItem('11A3_USER_AVATARS');
+          const userAvatarsRaw = localStorage.getItem('12A2_USER_AVATARS') || localStorage.getItem('11A3_USER_AVATARS');
           if (userAvatarsRaw) {
             const userAvatars = JSON.parse(userAvatarsRaw);
             if (userAvatars[student.id]) customAvatar = userAvatars[student.id];
@@ -868,7 +881,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     if (found) {
       let customAvatar = found.avatar;
       try {
-        const userAvatarsRaw = localStorage.getItem('11A3_USER_AVATARS');
+        const userAvatarsRaw = localStorage.getItem('12A2_USER_AVATARS') || localStorage.getItem('11A3_USER_AVATARS');
         if (userAvatarsRaw) {
           const userAvatars = JSON.parse(userAvatarsRaw);
           if (userAvatars[userId]) {
@@ -903,10 +916,10 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
     // 2. Persist in custom user avatars map in localStorage
     try {
-      const userAvatarsRaw = localStorage.getItem('11A3_USER_AVATARS');
+      const userAvatarsRaw = localStorage.getItem('12A2_USER_AVATARS') || localStorage.getItem('11A3_USER_AVATARS');
       const userAvatars = userAvatarsRaw ? JSON.parse(userAvatarsRaw) : {};
       userAvatars[userIdToUpdate] = newAvatarUrl;
-      localStorage.setItem('11A3_USER_AVATARS', JSON.stringify(userAvatars));
+      localStorage.setItem('12A2_USER_AVATARS', JSON.stringify(userAvatars));
     } catch (e) {}
 
     // 3. Find if there is a linked student ID
@@ -960,7 +973,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       const id = item.id || `hs-${timestamp}-${index + 1}`;
       return {
         id,
-        code: item.code || `11A3-${String(index + 1).padStart(2, '0')}`,
+        code: item.code || `12A2-${String(index + 1).padStart(2, '0')}`,
         fullName: item.fullName,
         gender: item.gender || 'Nam',
         dob: item.dob || '2009-01-01',
@@ -1407,13 +1420,13 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     }));
   };
 
-  const addMoment = (title: string, description: string, imageUrl: string) => {
+  const addMoment = (title: string, description: string, imageUrl: string, date?: string) => {
     const newMoment: ClassMoment = {
       id: `moment-${Date.now()}`,
       title,
       description,
       imageUrl,
-      date: new Date().toISOString().split('T')[0],
+      date: date || new Date().toISOString().split('T')[0],
       author: currentUser.fullName,
       likes: 0,
       likedBy: [],
@@ -1421,6 +1434,11 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     };
     setMoments(prev => [newMoment, ...prev]);
     saveDocumentToFirestore(COLLECTIONS.MOMENTS, newMoment);
+  };
+
+  const deleteMoment = (momentId: string) => {
+    setMoments(prev => prev.filter(m => m.id !== momentId));
+    deleteDocumentFromFirestore(COLLECTIONS.MOMENTS, momentId);
   };
 
   // Documents
@@ -1540,6 +1558,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       toggleLikeMoment,
       addMomentComment,
       addMoment,
+      deleteMoment,
       addDocument,
       createLeaveRequest,
       updateLeaveRequestStatus,

@@ -101,7 +101,7 @@ export const ParentDashboardView: React.FC<ParentDashboardViewProps> = ({ onNavi
                   👨‍👩‍👧 Cổng Thông Tin Phụ Huynh
                 </span>
                 <span className="bg-white/10 text-white text-xs px-2.5 py-0.5 rounded-full">
-                  Lớp 11A3
+                  Lớp 12A2
                 </span>
               </div>
               <h1 className="text-xl sm:text-2xl font-black text-white">{currentUser.fullName}</h1>
@@ -214,7 +214,7 @@ export const ParentDashboardView: React.FC<ParentDashboardViewProps> = ({ onNavi
                 />
                 <div>
                   <h3 className="font-bold text-slate-900 text-sm">Nhận Xét Của Giáo Viên Chủ Nhiệm</h3>
-                  <p className="text-xs text-blue-700 font-medium">Cô Võ Thị Thúy Hào • Lớp 11A3</p>
+                  <p className="text-xs text-blue-700 font-medium">Cô Võ Thị Thúy Hào • Lớp 12A2</p>
                 </div>
               </div>
               <span className="text-xs font-bold bg-blue-50 text-blue-700 px-3 py-1 rounded-full">
@@ -223,7 +223,7 @@ export const ParentDashboardView: React.FC<ParentDashboardViewProps> = ({ onNavi
             </div>
 
             <div className="bg-gradient-to-r from-blue-50 to-indigo-50/50 p-4 rounded-2xl border border-blue-100 text-xs sm:text-sm text-slate-800 leading-relaxed italic">
-              "{childStudent.notes || `Em ${childStudent.fullName} trong tuần qua đi học chuyên cần, tích cực tham gia các hoạt động xây dựng tập thể lớp 11A3. Gia đình tiếp tục động viên em ôn tập bài vở đều đặn nhé!`}"
+              "{childStudent.notes || `Em ${childStudent.fullName} trong tuần qua đi học chuyên cần, tích cực tham gia các hoạt động xây dựng tập thể lớp 12A2. Gia đình tiếp tục động viên em ôn tập bài vở đều đặn nhé!`}"
             </div>
 
             <div className="mt-4 flex items-center justify-between text-xs text-slate-500 pt-3 border-t border-slate-100">
@@ -246,7 +246,7 @@ export const ParentDashboardView: React.FC<ParentDashboardViewProps> = ({ onNavi
               <div className="flex items-center gap-2">
                 <span className="text-lg">📢</span>
                 <h3 className="font-bold text-slate-900 text-sm uppercase tracking-wide">
-                  Thông Báo Lớp 11A3 Dành Cho Phụ Huynh
+                  Thông Báo Lớp 12A2 Dành Cho Phụ Huynh
                 </h3>
               </div>
               <span className="text-xs text-slate-500">{announcements.length} thông báo</span>
@@ -369,7 +369,7 @@ export const ParentDashboardView: React.FC<ParentDashboardViewProps> = ({ onNavi
           <div className="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl animate-in zoom-in-95 duration-150">
             <h3 className="font-bold text-slate-900 text-base mb-1">Đơn Xin Nghỉ Học Cho Học Sinh</h3>
             <p className="text-xs text-slate-500 mb-4">
-              Học sinh: <strong>{childStudent.fullName}</strong> • Lớp 11A3 (GVCN: Võ Thị Thúy Hào)
+              Học sinh: <strong>{childStudent.fullName}</strong> • Lớp 12A2 (GVCN: Võ Thị Thúy Hào)
             </p>
 
             {leaveSuccess ? (

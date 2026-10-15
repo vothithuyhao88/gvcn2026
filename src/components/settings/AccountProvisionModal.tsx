@@ -127,9 +127,9 @@ export const AccountProvisionModal: React.FC<AccountProvisionModalProps> = ({ is
   };
 
   const handleBatchGenerateCodes = () => {
-    if (window.confirm('Hệ thống sẽ tự động chuẩn hóa Mã học sinh thành 2411A801 -> 2411A841 theo danh sách lớp. Bạn có muốn tiếp tục?')) {
-      batchGenerateStudentCodes('2411A8');
-      showToast('Đã chuẩn hóa toàn bộ Mã học sinh theo định dạng 2411A8XX!', 'success');
+    if (window.confirm('Hệ thống sẽ tự động chuẩn hóa Mã học sinh thành 12A2-01 -> 12A2-42 theo danh sách lớp. Bạn có muốn tiếp tục?')) {
+      batchGenerateStudentCodes('12A2-');
+      showToast('Đã chuẩn hóa toàn bộ Mã học sinh theo định dạng 12A2-XX!', 'success');
     }
   };
 
@@ -146,7 +146,7 @@ export const AccountProvisionModal: React.FC<AccountProvisionModalProps> = ({ is
   };
 
   const handleExportExcel = () => {
-    exportAccountListToExcel(students, 'Danh_Sach_Cap_Tai_Khoan_Lop_11A3');
+    exportAccountListToExcel(students, 'Danh_Sach_Cap_Tai_Khoan_Lop_12A2');
     showToast('Đã xuất file Excel Bảng Cấp Tài Khoản thành công!', 'success');
   };
 
@@ -167,7 +167,7 @@ export const AccountProvisionModal: React.FC<AccountProvisionModalProps> = ({ is
             </div>
             <div>
               <div className="flex items-center space-x-2">
-                <h2 className="text-lg font-bold">CÀI ĐẶT & CẤP TÀI KHOẢN LỚP 11A3</h2>
+                <h2 className="text-lg font-bold">CÀI ĐẶT & CẤP TÀI KHOẢN LỚP 12A2</h2>
                 <span className="bg-amber-800/60 text-amber-100 text-xs px-2.5 py-0.5 rounded-full font-medium border border-amber-400/30">
                   GVCN: Võ Thị Thúy Hào
                 </span>
@@ -232,7 +232,7 @@ export const AccountProvisionModal: React.FC<AccountProvisionModalProps> = ({ is
               <button
                 onClick={handleBatchGenerateCodes}
                 className="flex items-center space-x-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 border border-slate-300 dark:border-slate-600 transition"
-                title="Tự động chuẩn hóa mã 2411A801 -> 2411A841"
+                title="Tự động chuẩn hóa mã 12A2-01 -> 12A2-42"
               >
                 <Sparkles className="w-3.5 h-3.5 text-amber-500" />
                 <span className="hidden sm:inline">Chuẩn hóa</span> Mã HS
@@ -286,7 +286,7 @@ export const AccountProvisionModal: React.FC<AccountProvisionModalProps> = ({ is
                 <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
                 <input
                   type="text"
-                  placeholder="Tìm kiếm theo Tên học sinh, Mã HS (2411A8XX), Tên phụ huynh..."
+                  placeholder="Tìm kiếm theo Tên học sinh, Mã HS (12A2-XX), Tên phụ huynh..."
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
                   className="w-full pl-9 pr-4 py-2 text-xs sm:text-sm rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-orange-500"
@@ -557,7 +557,7 @@ export const AccountProvisionModal: React.FC<AccountProvisionModalProps> = ({ is
                 <div>
                   <h3 className="text-base font-bold text-slate-900 dark:text-white">Tài Khoản Giáo Viên Chủ Nhiệm (GVCN)</h3>
                   <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-                    Quản lý thông tin đăng nhập và quyền quản trị cao nhất của lớp 11A3
+                    Quản lý thông tin đăng nhập và quyền quản trị cao nhất của lớp 12A2
                   </p>
                 </div>
               </div>
@@ -638,7 +638,7 @@ export const AccountProvisionModal: React.FC<AccountProvisionModalProps> = ({ is
               {/* Roles summary */}
               <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700 space-y-2.5 text-xs text-slate-600 dark:text-slate-300">
                 <h4 className="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-[11px]">
-                  Cơ chế cấp quyền & bảo mật của lớp 11A3:
+                  Cơ chế cấp quyền & bảo mật của lớp 12A2:
                 </h4>
                 <div className="flex items-start space-x-2">
                   <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
@@ -689,7 +689,7 @@ export const AccountProvisionModal: React.FC<AccountProvisionModalProps> = ({ is
                   {/* Card Header */}
                   <div className="border-b border-orange-200 dark:border-slate-700 pb-2 mb-2">
                     <div className="text-[10px] font-bold uppercase tracking-wider text-orange-700 dark:text-orange-400">
-                      TT GDNN-GDTX TX. An Nhơn • Lớp 11A3
+                      TT GDNN-GDTX TX. An Nhơn • Lớp 12A2
                     </div>
                     <div className="text-sm font-bold text-slate-900 dark:text-white mt-0.5 flex items-center justify-between">
                       <span>{idx + 1}. {s.fullName}</span>

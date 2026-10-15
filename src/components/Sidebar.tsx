@@ -94,7 +94,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentTab, onSelectTab }) => 
               badge: pendingLeaves > 0 ? `${pendingLeaves} đơn` : undefined, 
               badgeColor: 'bg-amber-500 text-white' 
             },
-            { id: 'moments', label: 'Khoảnh khắc 11A3', icon: Camera },
+            { id: 'moments', label: 'Khoảnh khắc 12A2', icon: Camera },
             { id: 'documents', label: 'Sổ tay & Lịch học', icon: FolderOpen },
           ]
         }
@@ -124,7 +124,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentTab, onSelectTab }) => 
           items: [
             { 
               id: 'announcements', 
-              label: 'Thông báo lớp 11A3', 
+              label: 'Thông báo lớp 12A2', 
               icon: Megaphone, 
               badge: unreadAnnouncements > 0 ? unreadAnnouncements : undefined, 
               badgeColor: 'bg-blue-500 text-white' 
@@ -173,7 +173,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentTab, onSelectTab }) => 
               badgeColor: 'bg-blue-500 text-white' 
             },
             { id: 'connection', label: 'Góc kết nối & Trao đổi', icon: MessageSquare },
-            { id: 'moments', label: 'Khoảnh khắc 11A3', icon: Camera },
+            { id: 'moments', label: 'Khoảnh khắc 12A2', icon: Camera },
             { id: 'documents', label: 'Tài liệu & Lịch học', icon: FolderOpen },
           ]
         }
@@ -192,7 +192,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentTab, onSelectTab }) => 
       {
         groupTitle: 'QUẢN LÝ NHÂN SỰ',
         items: [
-          { id: 'students', label: 'Quản lý 41 Học sinh', icon: Users },
+          { id: 'students', label: 'Quản lý 42 Học sinh', icon: Users },
           { id: 'account-settings', label: 'Cấp tài khoản (Mã HS)', icon: KeyRound, badge: 'Cài đặt', badgeColor: 'bg-amber-500 text-white' },
           { id: 'parents', label: 'Quản lý Phụ huynh', icon: UserCog },
           { id: 'attendance', label: 'Điểm danh toàn lớp', icon: CalendarCheck },
@@ -231,7 +231,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentTab, onSelectTab }) => 
             badgeColor: 'bg-rose-500 text-white'
           },
           { id: 'diary', label: 'Nhật ký chủ nhiệm', icon: BookOpen },
-          { id: 'moments', label: 'Khoảnh khắc 11A3', icon: Camera },
+          { id: 'moments', label: 'Khoảnh khắc 12A2', icon: Camera },
           { id: 'documents', label: 'Tài liệu & Lịch học', icon: FolderOpen },
         ]
       }
@@ -266,7 +266,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentTab, onSelectTab }) => 
               {isGVCN ? 'GVCN Võ Thị Thúy Hào' 
                 : isBCS ? `BCS: ${currentUser.position}` 
                 : isParent ? 'Phụ Huynh Học Sinh' 
-                : 'Học Sinh Lớp 11A3'}
+                : 'Học Sinh Lớp 12A2'}
             </span>
             <span className="text-[10px] text-slate-500 block truncate font-medium">
               {isGVCN ? 'Toàn quyền quản trị lớp' 

@@ -111,7 +111,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         { id: 'duty', label: 'Lịch trực nhật con', icon: '🧹', group: 'Theo dõi con' },
         { id: 'announcements', label: 'Thông báo từ GVCN', icon: '📢', group: 'Liên hệ', badge: unreadAnnouncements > 0 ? `${unreadAnnouncements}` : undefined },
         { id: 'connection', label: 'Gửi Đơn phép & Nhắn tin', icon: '💬', group: 'Liên hệ', badge: pendingLeaves > 0 ? `${pendingLeaves}` : undefined },
-        { id: 'moments', label: 'Khoảnh khắc 11A3', icon: '📸', group: 'Khác' },
+        { id: 'moments', label: 'Khoảnh khắc 12A2', icon: '📸', group: 'Khác' },
         { id: 'documents', label: 'Sổ tay & Lịch học', icon: '📁', group: 'Khác' },
       ];
     }
@@ -126,7 +126,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         { id: 'duty', label: 'Lịch trực nhật tổ', icon: '🧹', group: 'Rèn luyện' },
         { id: 'announcements', label: 'Thông báo lớp', icon: '📢', group: 'Tương tác', badge: unreadAnnouncements > 0 ? `${unreadAnnouncements}` : undefined },
         { id: 'connection', label: 'Góc kết nối & Ý kiến', icon: '💬', group: 'Tương tác' },
-        { id: 'moments', label: 'Khoảnh khắc 11A3', icon: '📸', group: 'Dữ liệu' },
+        { id: 'moments', label: 'Khoảnh khắc 12A2', icon: '📸', group: 'Dữ liệu' },
         { id: 'documents', label: 'Tài liệu học tập & TKB', icon: '📁', group: 'Dữ liệu' },
       ];
     }
@@ -142,7 +142,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         { id: 'duty', label: 'Lịch trực nhật & Phân công', icon: '🧹', group: 'Nề nếp' },
         { id: 'announcements', label: 'Thông báo & Chỉ đạo GVCN', icon: '📢', group: 'Tương tác', badge: unreadAnnouncements > 0 ? `${unreadAnnouncements}` : undefined },
         { id: 'connection', label: 'Góc kết nối & Trao đổi', icon: '💬', group: 'Tương tác' },
-        { id: 'moments', label: 'Khoảnh khắc 11A3', icon: '📸', group: 'Dữ liệu' },
+        { id: 'moments', label: 'Khoảnh khắc 12A2', icon: '📸', group: 'Dữ liệu' },
         { id: 'documents', label: 'Tài liệu & Lịch học', icon: '📁', group: 'Dữ liệu' },
       ];
     }
@@ -151,7 +151,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     return [
       { id: 'dashboard', label: 'Trang chủ GVCN', icon: '🏠', group: 'Tổng quan' },
       { id: 'ai-assistant', label: 'Trợ lý AI Chủ nhiệm', icon: '✨', group: 'Tổng quan', badge: 'AI' },
-      { id: 'students', label: 'Quản lý 41 Học sinh', icon: '👨‍🎓', group: 'Quản lý' },
+      { id: 'students', label: 'Quản lý 42 Học sinh', icon: '👨‍🎓', group: 'Quản lý' },
       { id: 'parents', label: 'Quản lý Phụ huynh', icon: '👥', group: 'Quản lý' },
       { id: 'attendance', label: 'Điểm danh toàn lớp', icon: '📅', group: 'Quản lý' },
       { id: 'emulation', label: 'Thang điểm & Xếp loại', icon: '🏆', group: 'Thi đua' },
@@ -161,7 +161,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       { id: 'announcements', label: 'Thông báo lớp', icon: '📢', group: 'Kết nối', badge: unreadAnnouncements > 0 ? `${unreadAnnouncements}` : undefined },
       { id: 'connection', label: 'Góc kết nối & Đơn phép', icon: '💬', group: 'Kết nối', badge: pendingLeaves > 0 ? `${pendingLeaves} đơn` : undefined },
       { id: 'diary', label: 'Nhật ký chủ nhiệm', icon: '📖', group: 'Kết nối' },
-      { id: 'moments', label: 'Khoảnh khắc 11A3', icon: '📸', group: 'Dữ liệu' },
+      { id: 'moments', label: 'Khoảnh khắc 12A2', icon: '📸', group: 'Dữ liệu' },
       { id: 'documents', label: 'Tài liệu & Lịch học', icon: '📁', group: 'Dữ liệu' },
     ];
   };
@@ -184,20 +184,20 @@ export const Navbar: React.FC<NavbarProps> = ({
               {isMobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
 
-            {/* 11A3 Circular Brand Logo */}
+            {/* 12A2 Circular Brand Logo */}
             <div 
               onClick={() => handleSelect('dashboard')}
               className="cursor-pointer group flex items-center shrink-0"
-              title="Lớp 11A3 • Đoàn Kết & Chia Sẻ (Niên khóa 2025–2028)"
+              title="Lớp 12A2 • Đoàn Kết & Chia Sẻ (Niên khóa 2024–2027)"
             >
               <ClassLogo size="md" withBorder={true} withGlow={true} />
             </div>
             <div>
               <h1 className="text-base sm:text-lg lg:text-xl font-black leading-tight tracking-tight text-white flex items-center gap-2">
-                <span>LỚP 11A3 • ĐOÀN KẾT & CHIA SẺ</span>
+                <span>LỚP 12A2 • ĐOÀN KẾT & CHIA SẺ</span>
               </h1>
               <p className="text-blue-100 text-xs sm:text-sm mt-0.5 uppercase tracking-wider font-medium">
-                Niên khóa 2025–2028 • GVCN Võ Thị Thúy Hào
+                Niên khóa 2024–2027 • GVCN Võ Thị Thúy Hào
               </p>
             </div>
           </div>
@@ -386,7 +386,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                         <div className="min-w-0">
                           <div className="truncate font-bold text-slate-900">{currentUser.fullName}</div>
                           <div className="text-xs text-slate-500 truncate">
-                            {isGVCN ? '👑 Toàn quyền quản trị lớp 11A3' : currentUser.position || 'Phụ huynh học sinh'}
+                            {isGVCN ? '👑 Toàn quyền quản trị lớp 12A2' : currentUser.position || 'Phụ huynh học sinh'}
                           </div>
                         </div>
                       </div>
@@ -438,7 +438,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                               <img src={avatarToUse} alt={u.fullName} className="w-8 h-8 rounded-lg object-cover ring-1 ring-blue-300" />
                               <div>
                                 <div className="font-bold text-slate-900 text-xs">{u.fullName}</div>
-                                <div className="text-[10px] text-blue-600">GVCN lớp 11A3 (Toàn quyền)</div>
+                                <div className="text-[10px] text-blue-600">GVCN lớp 12A2 (Toàn quyền)</div>
                               </div>
                             </div>
                             {u.id === currentUser.id && <CheckCircle2 className="w-4 h-4 text-blue-600" />}
@@ -602,7 +602,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         onClose={() => setIsAvatarModalOpen(false)}
         currentAvatar={currentUser.avatar || ''}
         userName={currentUser.fullName}
-        userRoleTitle={isGVCN ? 'Giáo Viên Chủ Nhiệm' : isBCS ? (currentUser.position || 'Ban Cán Sự') : isParent ? 'Phụ Huynh Học Sinh' : 'Học Sinh Lớp 11A3'}
+        userRoleTitle={isGVCN ? 'Giáo Viên Chủ Nhiệm' : isBCS ? (currentUser.position || 'Ban Cán Sự') : isParent ? 'Phụ Huynh Học Sinh' : 'Học Sinh Lớp 12A2'}
         userGender={currentUser.fullName.includes('Thị') || currentUser.fullName.includes('Mai') || currentUser.fullName.includes('Nguyễn Thị') || currentUser.fullName.includes('Hào') ? 'Nữ' : 'Nam'}
         userRole={currentUser.role}
         onSaveAvatar={(newAvatarUrl) => {

@@ -30,11 +30,11 @@ export const ClassLogo: React.FC<ClassLogoProps> = ({
     <div 
       className={`relative inline-block rounded-full select-none ${onClick ? 'cursor-pointer' : ''} ${className}`}
       onClick={onClick}
-      title={showTooltip ? 'Lớp 11A3 • Đoàn Kết & Chia Sẻ (Niên khóa 2025–2028)' : undefined}
+      title={showTooltip ? 'Lớp 12A2 • Đoàn Kết & Chia Sẻ (Niên khóa 2024–2027)' : undefined}
     >
       <img
         src="/logo.png"
-        alt="Logo Lớp 11A3 - Đoàn Kết Và Chia Sẻ (Niên Khóa 2025-2028)"
+        alt="Logo Lớp 12A2 - Đoàn Kết Và Chia Sẻ (Niên Khóa 2024-2027)"
         referrerPolicy="no-referrer"
         className={`rounded-full object-cover aspect-square transition-transform duration-300 hover:scale-105 ${
           sizeClasses[size]

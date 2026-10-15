@@ -99,7 +99,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
               <div className="flex items-center gap-2">
                 <span className="text-amber-400 text-[11px] font-bold uppercase tracking-wider">Hệ Thống Quản Lý Lớp Học</span>
               </div>
-              <h2 className="text-lg font-black text-white mt-0.5">LỚP 11A3 • ĐĂNG NHẬP</h2>
+              <h2 className="text-lg font-black text-white mt-0.5">LỚP 12A2 • ĐĂNG NHẬP</h2>
             </div>
           </div>
         </div>
@@ -107,36 +107,10 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
         {/* Modal Body */}
         <div className="p-6 sm:p-7">
           
-          {/* Security & Credentials Guidance */}
-          <div className="mb-5 space-y-2">
-            <div className="flex items-center gap-2.5 p-3 rounded-2xl bg-blue-50 dark:bg-blue-950/40 border border-blue-100 dark:border-blue-900/50 text-blue-800 dark:text-blue-200 text-xs">
-              <ShieldCheck className="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0" />
-              <span>Hệ thống bảo mật xác thực quản trị lớp 11A3 & cơ sở dữ liệu thời gian thực.</span>
-            </div>
-
-            {/* Quick Fill Hints */}
-            <div className="p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-xs space-y-1.5">
-              <div className="flex items-center justify-between">
-                <span className="font-bold text-slate-700 dark:text-slate-200 flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-amber-500 inline-block"></span>
-                  <span>Tài khoản GVCN:</span>
-                </span>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setIdentifierInput('thuyhao');
-                    setPasswordInput('thuyhao 88');
-                    if (errorMessage) setErrorMessage(null);
-                  }}
-                  className="text-[11px] font-bold text-blue-600 hover:text-blue-700 dark:text-blue-400 hover:underline cursor-pointer"
-                >
-                  Điền nhanh (thuyhao)
-                </button>
-              </div>
-              <p className="text-[11px] text-slate-500 dark:text-slate-400">
-                Tên đăng nhập: <code className="font-mono font-bold text-orange-600">thuyhao</code> | Mật khẩu: <code className="font-mono font-bold text-orange-600">thuyhao 88</code>
-              </p>
-            </div>
+          {/* Security Banner */}
+          <div className="mb-5 flex items-center gap-2.5 p-3.5 rounded-2xl bg-blue-50 dark:bg-blue-950/40 border border-blue-100 dark:border-blue-900/50 text-blue-800 dark:text-blue-200 text-xs">
+            <ShieldCheck className="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0" />
+            <span>Hệ thống bảo mật xác thực quản trị lớp 12A2 & cơ sở dữ liệu thời gian thực.</span>
           </div>
 
           {/* Form */}

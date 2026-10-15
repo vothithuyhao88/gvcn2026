@@ -38,9 +38,9 @@ const TARGET_OPTIONS: TargetOption[] = [
   {
     value: 'ALL',
     label: 'Toàn lớp',
-    badgeLabel: 'Toàn thể Lớp 11A3 (41 HS & PH)',
+    badgeLabel: 'Toàn thể Lớp 12A2 (42 HS & PH)',
     icon: '🌐',
-    desc: 'Tất cả 41 học sinh & Quý Phụ huynh lớp 11A3',
+    desc: 'Tất cả 42 học sinh & Quý Phụ huynh lớp 12A2',
     badgeClass: 'bg-blue-50 text-blue-800 border-blue-200'
   },
   {
@@ -64,38 +64,38 @@ const TARGET_OPTIONS: TargetOption[] = [
 const TEMPLATES: { [key in 'ALL' | 'BCS' | 'PARENTS']: { title: string; category: string; content: string }[] } = {
   ALL: [
     {
-      title: '🏆 Kế hoạch Thi đua Tuần Mới & Giữ gìn Kỷ cương Lớp 11A3',
+      title: '🏆 Kế hoạch Thi đua Tuần Mới & Giữ gìn Kỷ cương Lớp 12A2',
       category: 'PHONG TRÀO',
-      content: 'Chào toàn thể các em học sinh lớp 11A3!\n\n1. Tuần này lớp chúng ta tiếp tục duy trì thi đua Hoa Điểm Tốt và giữ gìn nề nếp 15 phút đầu giờ.\n2. Yêu cầu 100% học sinh mặc đúng đồng phục, mang đầy đủ sách vở và dụng cụ học tập.\n3. Lịch học nghề Trung cấp: Thứ 3 và Thứ 5 (Nam học Hàn, Nữ học Kế toán) yêu cầu tham gia đúng giờ, không vắng không phép.\n\nChúc cả lớp một tuần học tập hiệu quả và đạt nhiều điểm cộng thi đua!\n\nGVCN: Võ Thị Thúy Hào'
+      content: 'Chào toàn thể các em học sinh lớp 12A2!\n\n1. Tuần này lớp chúng ta tiếp tục duy trì thi đua Hoa Điểm Tốt và giữ gìn nề nếp 15 phút đầu giờ.\n2. Yêu cầu 100% học sinh mặc đúng đồng phục, mang đầy đủ sách vở và dụng cụ học tập.\n3. Lịch học nghề Trung cấp: Thứ 3 và Thứ 5 (Nam học Hàn, Nữ học Kế toán) yêu cầu tham gia đúng giờ, không vắng không phép.\n\nChúc cả lớp một tuần học tập hiệu quả và đạt nhiều điểm cộng thi đua!\n\nGVCN: Võ Thị Thúy Hào'
     },
     {
       title: '⏰ Thông báo: Lịch Kiểm tra Giữa kỳ & Ôn tập Văn hóa',
       category: 'HỌC TẬP',
-      content: 'Thông báo đến toàn thể 41 học sinh lớp 11A3:\n- Lịch ôn tập và kiểm tra định kỳ các môn văn hóa sẽ diễn ra trong tuần tới.\n- Đề nghị các em chủ động ôn bài theo đề cương của các thầy cô bộ môn.\n- Các bạn trong Ban cán sự hỗ trợ đôn đốc các tổ ôn tập nghiêm túc.\n\nGVCN: Võ Thị Thúy Hào'
+      content: 'Thông báo đến toàn thể 42 học sinh lớp 12A2:\n- Lịch ôn tập và kiểm tra định kỳ các môn văn hóa sẽ diễn ra trong tuần tới.\n- Đề nghị các em chủ động ôn bài theo đề cương của các thầy cô bộ môn.\n- Các bạn trong Ban cán sự hỗ trợ đôn đốc các tổ ôn tập nghiêm túc.\n\nGVCN: Võ Thị Thúy Hào'
     }
   ],
   BCS: [
     {
       title: '🎖️ Giao nhiệm vụ Ban Cán sự: Theo dõi Nề nếp & Tổng hợp Điểm Thi đua',
       category: 'BAN CÁN SỰ',
-      content: 'Gửi Ban Cán Sự Lớp 11A3 (Lớp trưởng Nguyễn Văn An, Lớp phó Mai Phương, Bí thư Hoàng Nam và 4 Tổ trưởng):\n\n1. Lớp phó Nề nếp: Kiểm tra và chốt sĩ số, chuyên cần và học sinh đi trễ mỗi đầu buổi học.\n2. 4 Tổ trưởng: Chấm điểm thi đua thành viên trong tổ theo đúng biểu điểm, nhập và trình GVCN phê duyệt trước tiết sinh hoạt Thứ Bảy.\n3. Lớp phó Lao động: Đôn đốc tổ trực nhật vệ sinh phòng học sạch sẽ, tắt điện quạt trước khi ra về.\n\nĐề nghị các em thực hiện nghiêm túc và gương mẫu đi đầu!\n\nGVCN: Võ Thị Thúy Hào'
+      content: 'Gửi Ban Cán Sự Lớp 12A2 (Lớp trưởng Nguyễn Văn An, Lớp phó Mai Phương, Bí thư Hoàng Nam và 4 Tổ trưởng):\n\n1. Lớp phó Nề nếp: Kiểm tra và chốt sĩ số, chuyên cần và học sinh đi trễ mỗi đầu buổi học.\n2. 4 Tổ trưởng: Chấm điểm thi đua thành viên trong tổ theo đúng biểu điểm, nhập và trình GVCN phê duyệt trước tiết sinh hoạt Thứ Bảy.\n3. Lớp phó Lao động: Đôn đốc tổ trực nhật vệ sinh phòng học sạch sẽ, tắt điện quạt trước khi ra về.\n\nĐề nghị các em thực hiện nghiêm túc và gương mẫu đi đầu!\n\nGVCN: Võ Thị Thúy Hào'
     },
     {
-      title: '📋 Lịch Họp Giao Ban Ban Cán Sự Lớp 11A3 Đầu Tuần',
+      title: '📋 Lịch Họp Giao Ban Ban Cán Sự Lớp 12A2 Đầu Tuần',
       category: 'BAN CÁN SỰ',
-      content: 'Triệu tập Ban Cán sự lớp 11A3:\n- Thời gian: 07h00 sáng Thứ Hai (15 phút trước giờ chào cờ).\n- Địa điểm: Phòng học 11A3 (Bàn GVCN).\n- Nội dung: Rà soát công tác tuần qua, giải quyết các vướng mắc của 4 tổ và triển khai kế hoạch phong trào mới.\n\nYêu cầu các em có mặt đúng giờ, đầy đủ sổ tay theo dõi.\n\nGVCN: Võ Thị Thúy Hào'
+      content: 'Triệu tập Ban Cán sự lớp 12A2:\n- Thời gian: 07h00 sáng Thứ Hai (15 phút trước giờ chào cờ).\n- Địa điểm: Phòng học 12A2 (Bàn GVCN).\n- Nội dung: Rà soát công tác tuần qua, giải quyết các vướng mắc của 4 tổ và triển khai kế hoạch phong trào mới.\n\nYêu cầu các em có mặt đúng giờ, đầy đủ sổ tay theo dõi.\n\nGVCN: Võ Thị Thúy Hào'
     }
   ],
   PARENTS: [
     {
       title: '📢 Giấy Mời Họp Phụ Huynh Đầu Năm Học 2026–2027 & Đào Tạo Nghề Trung Cấp',
       category: 'HỌP PHỤ HUYNH',
-      content: 'Kính gửi Quý Phụ huynh học sinh Lớp 11A3,\n\nNhà trường và GVCN trân trọng kính mời Quý Phụ huynh đến tham dự buổi Họp Phụ Huynh đầu năm học 2026 - 2027:\n- Thời gian: 08h00, Chủ Nhật (ngày 30/08/2026)\n- Địa điểm: Phòng học số 04, Trung tâm GDNN-GDTX An Nhơn\n- Nội dung chính:\n  + Báo cáo tình hình học sinh đầu năm học và phương hướng rèn luyện.\n  + Phối hợp đào tạo nghề Trung cấp song hành (Nam học Hàn, Nữ học Kế toán).\n  + Bầu Ban đại diện Cha Mẹ Học Sinh lớp.\n\nRất mong Quý Phụ huynh sắp xếp thời gian tham dự đông đủ và đúng giờ.\n\nTrân trọng cảm ơn sự đồng hành của Quý Phụ huynh!\nGVCN: Võ Thị Thúy Hào - SĐT: 0914.821.345'
+      content: 'Kính gửi Quý Phụ huynh học sinh Lớp 12A2,\n\nNhà trường và GVCN trân trọng kính mời Quý Phụ huynh đến tham dự buổi Họp Phụ Huynh đầu năm học 2026 - 2027:\n- Thời gian: 08h00, Chủ Nhật (ngày 30/08/2026)\n- Địa điểm: Phòng học số 04, Trung tâm GDNN-GDTX An Nhơn\n- Nội dung chính:\n  + Báo cáo tình hình học sinh đầu năm học và phương hướng rèn luyện.\n  + Phối hợp đào tạo nghề Trung cấp song hành (Nam học Hàn, Nữ học Kế toán).\n  + Bầu Ban đại diện Cha Mẹ Học Sinh lớp.\n\nRất mong Quý Phụ huynh sắp xếp thời gian tham dự đông đủ và đúng giờ.\n\nTrân trọng cảm ơn sự đồng hành của Quý Phụ huynh!\nGVCN: Võ Thị Thúy Hào - SĐT: 0914.821.345'
     },
     {
       title: '👨‍👩‍👧 Thông báo: Phối hợp Quản lý Chuyên cần & Học nghề Trung cấp',
       category: 'HỌP PHỤ HUYNH',
-      content: 'Kính gửi Quý Phụ huynh Lớp 11A3,\n\nĐể đảm bảo quyền lợi học tập song bằng (Văn hóa THPT & Nghề Trung cấp), kính nhờ Quý Phụ huynh cùng GVCN đôn đốc các em:\n1. Đi học đúng giờ các buổi sáng văn hóa (7h00) và buổi chiều học nghề Thứ 3, Thứ 5.\n2. Khi học sinh có lý do sức khỏe hoặc việc gia đình đột xuất, Quý phụ huynh vui lòng gửi Đơn xin phép trực tuyến trên ứng dụng hoặc liên hệ trực tiếp GVCN trước 07h00 sáng.\n\nGVCN: Võ Thị Thúy Hào'
+      content: 'Kính gửi Quý Phụ huynh Lớp 12A2,\n\nĐể đảm bảo quyền lợi học tập song bằng (Văn hóa THPT & Nghề Trung cấp), kính nhờ Quý Phụ huynh cùng GVCN đôn đốc các em:\n1. Đi học đúng giờ các buổi sáng văn hóa (7h00) và buổi chiều học nghề Thứ 3, Thứ 5.\n2. Khi học sinh có lý do sức khỏe hoặc việc gia đình đột xuất, Quý phụ huynh vui lòng gửi Đơn xin phép trực tuyến trên ứng dụng hoặc liên hệ trực tiếp GVCN trước 07h00 sáng.\n\nGVCN: Võ Thị Thúy Hào'
     }
   ]
 };
@@ -185,7 +185,7 @@ export const AnnouncementsView: React.FC = () => {
         targetAudience,
         important,
         attachments: [
-          { name: `Thong_bao_${targetAudience.toLowerCase()}_11A3.pdf`, size: '185 KB' }
+          { name: `Thong_bao_${targetAudience.toLowerCase()}_12A2.pdf`, size: '185 KB' }
         ],
       });
     }
@@ -208,7 +208,7 @@ export const AnnouncementsView: React.FC = () => {
     if (target === 'STUDENTS') return {
       value: 'ALL' as const,
       label: 'Học sinh',
-      badgeLabel: 'Học Sinh Lớp 11A3',
+      badgeLabel: 'Học Sinh Lớp 12A2',
       icon: '🎓',
       desc: 'Toàn thể học sinh',
       badgeClass: 'bg-indigo-50 text-indigo-800 border-indigo-200'
@@ -224,7 +224,7 @@ export const AnnouncementsView: React.FC = () => {
         <div>
           <div className="flex items-center gap-2 text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">
             <Bell className="w-4 h-4" />
-            <span>Kênh Thông Báo & Chỉ Đạo Lớp 11A3</span>
+            <span>Kênh Thông Báo & Chỉ Đạo Lớp 12A2</span>
           </div>
           <h1 className="text-xl sm:text-2xl font-black text-slate-900">
             Thông Báo Lớp Chủ Nhiệm (2026–2027)
@@ -263,7 +263,7 @@ export const AnnouncementsView: React.FC = () => {
             <div>
               <div className="text-xs font-bold">Đích đến: Toàn lớp</div>
               <div className={`text-[11px] ${selectedTargetFilter === 'ALL' ? 'text-blue-100' : 'text-slate-500'}`}>
-                41 HS & Quý Phụ huynh
+                42 HS & Quý Phụ huynh
               </div>
             </div>
           </div>
@@ -309,7 +309,7 @@ export const AnnouncementsView: React.FC = () => {
             <div>
               <div className="text-xs font-bold">Đích đến: Phụ huynh</div>
               <div className={`text-[11px] ${selectedTargetFilter === 'PARENTS' ? 'text-emerald-100' : 'text-slate-500'}`}>
-                Gia đình 41 học sinh Lớp 11A3
+                Gia đình 42 học sinh Lớp 12A2
               </div>
             </div>
           </div>
@@ -539,7 +539,7 @@ export const AnnouncementsView: React.FC = () => {
                 <h3 className="font-black text-slate-900 text-lg">
                   {editingAnn ? 'Chỉnh Sửa Thông Báo' : 'Phát Hành Thông Báo Mới'}
                 </h3>
-                <p className="text-xs text-slate-500">Người phát hành: <strong>Cô Võ Thị Thúy Hào (GVCN Lớp 11A3)</strong></p>
+                <p className="text-xs text-slate-500">Người phát hành: <strong>Cô Võ Thị Thúy Hào (GVCN Lớp 12A2)</strong></p>
               </div>
               <button
                 type="button"
@@ -626,7 +626,7 @@ export const AnnouncementsView: React.FC = () => {
                   required
                   placeholder={
                     targetAudience === 'BCS'
-                      ? 'Ví dụ: Triệu tập họp Ban Cán sự lớp 11A3 đầu giờ Thứ Sáu...'
+                      ? 'Ví dụ: Triệu tập họp Ban Cán sự lớp 12A2 đầu giờ Thứ Sáu...'
                       : targetAudience === 'PARENTS'
                       ? 'Ví dụ: Kính mời Quý Phụ huynh dự Họp CMHS đầu năm học 2026-2027...'
                       : 'Ví dụ: Kế hoạch thi đua tuần mới & Nhắc nhở lịch học nghề Trung cấp...'

@@ -44,7 +44,7 @@ export const DutyScheduleView: React.FC = () => {
             <span>Phân Công Lao Động & Vệ Sinh Lớp Học</span>
           </div>
           <h1 className="text-xl sm:text-2xl font-black text-slate-900">
-            Lịch Trực Nhật Lớp 11A3 (Thứ 2 – Thứ 7)
+            Lịch Trực Nhật Lớp 12A2 (Thứ 2 – Thứ 7)
           </h1>
           <p className="text-xs text-slate-500 mt-0.5">
             Quản lý và giám sát bởi Lớp phó Lao động & Nề nếp (Trần Minh Khang) và GVCN Võ Thị Thúy Hào
@@ -156,7 +156,7 @@ export const DutyScheduleView: React.FC = () => {
 
       {/* Rules Note */}
       <div className="bg-slate-50 border border-slate-200 rounded-3xl p-5 text-xs text-slate-600 space-y-2">
-        <h4 className="font-bold text-slate-900 uppercase">Quy định trực nhật & vệ sinh 11A3:</h4>
+        <h4 className="font-bold text-slate-900 uppercase">Quy định trực nhật & vệ sinh 12A2:</h4>
         <ul className="list-disc list-inside space-y-1 text-[11px] leading-relaxed">
           <li>Tổ trực nhật có mặt trước giờ học 15 phút để lau bảng, quét lớp và đổ rác.</li>
           <li>Cuối buổi học: Kiểm tra đóng cửa sổ, tắt tất cả quạt trần, đèn chiếu sáng và tắt máy chiếu.</li>

@@ -83,7 +83,7 @@ export const HomeroomDiaryView: React.FC = () => {
             <span>Sổ Tay Điện Tử • GVCN Võ Thị Thúy Hào</span>
           </div>
           <h1 className="text-xl sm:text-2xl font-black text-slate-900">
-            Nhật Ký Chủ Nhiệm Lớp 11A3
+            Nhật Ký Chủ Nhiệm Lớp 12A2
           </h1>
           <p className="text-xs text-slate-500 mt-0.5">
             Ghi chép diễn biến nề nếp, học tập, sự việc phát sinh và kết quả trao đổi với phụ huynh học sinh
@@ -192,7 +192,7 @@ export const HomeroomDiaryView: React.FC = () => {
         <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-xs flex items-center justify-center p-4">
           <div className="bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl animate-in zoom-in-95 duration-150">
             <h3 className="font-bold text-slate-900 text-lg mb-1">Ghi Nhật Ký Chủ Nhiệm Mới</h3>
-            <p className="text-xs text-slate-500 mb-4">Lớp 11A3 • Năm học 2026–2027</p>
+            <p className="text-xs text-slate-500 mb-4">Lớp 12A2 • Năm học 2026–2027</p>
 
             <form onSubmit={handleCreateDiary} className="space-y-3 text-xs">
               <div className="grid grid-cols-2 gap-3">

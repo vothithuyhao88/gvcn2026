@@ -130,7 +130,7 @@ export const ExcelImportModal: React.FC<ExcelImportModalProps> = ({
             offset = 1;
           }
 
-          code = cols[offset] || `11A3-${String(parsedList.length + 1).padStart(2, '0')}`;
+          code = cols[offset] || `12A2-${String(parsedList.length + 1).padStart(2, '0')}`;
           fullName = cols[offset + 1] || cols[0];
           
           if (cols[offset + 2]) {
@@ -241,7 +241,7 @@ export const ExcelImportModal: React.FC<ExcelImportModalProps> = ({
                 <span>Nhập Danh Sách Học Sinh Từ File Mẫu Excel</span>
               </h2>
               <p className="text-emerald-100 text-xs mt-0.5">
-                Lớp 11A3 (Niên khóa 2025–2028) • Tự động nhận diện cột thông tin & phụ huynh
+                Lớp 12A2 (Niên khóa 2024–2027) • Tự động nhận diện cột thông tin & phụ huynh
               </p>
             </div>
           </div>
@@ -365,7 +365,7 @@ export const ExcelImportModal: React.FC<ExcelImportModalProps> = ({
               <textarea
                 value={pasteText}
                 onChange={(e) => setPasteText(e.target.value)}
-                placeholder="Ví dụ:&#10;11A3-01	Nguyễn Văn An	Nam	2009-03-15	1	LỚP TRƯỞNG	Hàn	0912345678	Nguyễn Văn Bình	0987654321	Bố	TX. An Nhơn&#10;11A3-02	Lê Thị Mai Phương	Nữ	2009-07-20	2	LỚP PHÓ HỌC TẬP	Kế toán	0923456789	Lê Văn Cường	0978123456	Bố	TX. An Nhơn"
+                placeholder="Ví dụ:&#10;12A2-01	Nguyễn Văn An	Nam	2009-03-15	1	LỚP TRƯỞNG	Hàn	0912345678	Nguyễn Văn Bình	0987654321	Bố	TX. An Nhơn&#10;12A2-02	Lê Thị Mai Phương	Nữ	2009-07-20	2	LỚP PHÓ HỌC TẬP	Kế toán	0923456789	Lê Văn Cường	0978123456	Bố	TX. An Nhơn"
                 rows={5}
                 className="w-full text-xs font-mono p-3.5 border border-slate-300 rounded-2xl focus:ring-2 focus:ring-emerald-500 focus:outline-none bg-slate-50 leading-relaxed"
               />
@@ -431,7 +431,7 @@ export const ExcelImportModal: React.FC<ExcelImportModalProps> = ({
                       {parsedRows.map((r, i) => (
                         <tr key={i} className="hover:bg-slate-50/80 transition">
                           <td className="p-2.5 pl-3 text-slate-400 font-mono text-[11px]">{i + 1}</td>
-                          <td className="p-2.5 font-mono font-bold text-blue-700 text-[11px]">{r.code || `11A3-${String(i+1).padStart(2,'0')}`}</td>
+                          <td className="p-2.5 font-mono font-bold text-blue-700 text-[11px]">{r.code || `12A2-${String(i+1).padStart(2,'0')}`}</td>
                           <td className="p-2.5 font-bold text-slate-900">{r.fullName}</td>
                           <td className="p-2.5">
                             <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
@@ -476,7 +476,7 @@ export const ExcelImportModal: React.FC<ExcelImportModalProps> = ({
           <div className="bg-amber-50/70 border border-amber-200 rounded-2xl p-3.5 text-xs text-amber-900 space-y-1">
             <p className="font-bold flex items-center gap-1.5 text-amber-950">
               <HelpCircle className="w-4 h-4 text-amber-600" />
-              <span>Hướng dẫn cấu trúc dữ liệu Lớp 11A3:</span>
+              <span>Hướng dẫn cấu trúc dữ liệu Lớp 12A2:</span>
             </p>
             <ul className="list-disc list-inside space-y-0.5 text-[11px] text-amber-800 pl-1">
               <li><strong>Nghề học:</strong> Nam học nghề Hàn, Nữ học nghề Kế toán.</li>
@@ -523,7 +523,7 @@ export const ExcelImportModal: React.FC<ExcelImportModalProps> = ({
               }`}
             >
               <CheckCircle2 className="w-4 h-4 stroke-[2.5]" />
-              <span>Xác Nhận Nhập {validCount > 0 ? `${validCount} Học Sinh` : ''} Vào Lớp 11A3</span>
+              <span>Xác Nhận Nhập {validCount > 0 ? `${validCount} Học Sinh` : ''} Vào Lớp 12A2</span>
             </button>
           </div>
         </div>

@@ -232,7 +232,7 @@ export const TeamScoringView: React.FC = () => {
               <Sparkles className="w-4 h-4 text-amber-600" />
             </div>
             <h3 className="font-black text-slate-900 text-xs sm:text-sm uppercase tracking-wider">
-              Thang Điểm 100 & Tiêu Chuẩn Xếp Loại Thành Viên Lớp 11A3
+              Thang Điểm 100 & Tiêu Chuẩn Xếp Loại Thành Viên Lớp 12A2
             </h3>
           </div>
           <button
@@ -478,7 +478,7 @@ export const TeamScoringView: React.FC = () => {
               {/* 2. Chọn tiêu chí chấm từ bảng quy định */}
               <div className="bg-white/80 p-3 rounded-2xl border-2 border-blue-200/90 shadow-2xs">
                 <label className="block font-black text-slate-800 mb-1.5">
-                  2. Chọn tiêu chí chấm (Thang điểm chuẩn 11A3):
+                  2. Chọn tiêu chí chấm (Thang điểm chuẩn 12A2):
                 </label>
                 <select
                   value={selectedCriteriaId}
@@ -557,7 +557,7 @@ export const TeamScoringView: React.FC = () => {
               <span className="p-1 bg-blue-600 text-white rounded-lg">
                 <Info className="w-3.5 h-3.5" />
               </span>
-              <span>Ghi nhớ bảng quy định 11A3</span>
+              <span>Ghi nhớ bảng quy định 12A2</span>
             </h4>
             <ul className="space-y-1.5 list-disc list-inside text-[11px] leading-relaxed font-medium">
               <li>Phát biểu xây dựng bài đúng: <strong className="text-emerald-700 bg-emerald-100/80 px-1.5 py-0.5 rounded-md font-bold">+3 điểm</strong></li>

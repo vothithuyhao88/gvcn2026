@@ -109,7 +109,7 @@ const MainLayout: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block shrink-0" />
-                <span className="font-bold text-slate-800">LỚP 11A3 – KẾT NỐI & TRƯỞNG THÀNH</span>
+                <span className="font-bold text-slate-800">LỚP 12A2 – KẾT NỐI & TRƯỞNG THÀNH</span>
                 <span className="hidden sm:inline">• Trung tâm GDNN-GDTX An Nhơn (2026–2027)</span>
               </div>
               <div className="text-center sm:text-right">

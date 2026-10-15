@@ -144,9 +144,9 @@ export async function initializeFirestoreDataIfEmpty(initialData: {
       createdAt: new Date().toISOString(),
     });
 
-    const settingsRef = doc(db, COLLECTIONS.SETTINGS, 'class_11a3_config');
+    const settingsRef = doc(db, COLLECTIONS.SETTINGS, 'class_12a2_config');
     batch.set(settingsRef, {
-      className: '11A3',
+      className: '12A2',
       schoolYear: '2026-2027',
       teacherName: 'Võ Thị Thúy Hào',
       teacherCredentials: initialData.teacherCredentials,

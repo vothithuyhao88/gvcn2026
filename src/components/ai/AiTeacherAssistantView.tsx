@@ -45,10 +45,10 @@ export const AiTeacherAssistantView: React.FC = () => {
   const [agendaPlans, setAgendaPlans] = useState('Phát động tuần lễ hoa điểm tốt chào mừng ngày nhà giáo, kiểm tra 15 phút môn Toán');
 
   // Form states for Feature 4: Weekly Report
-  const [repAttendance, setRepAttendance] = useState('Sĩ số 41/41, chuyên cần đạt 98%, có 1 lượt nghỉ có phép');
+  const [repAttendance, setRepAttendance] = useState('Sĩ số 42/42, chuyên cần đạt 98%, có 1 lượt nghỉ có phép');
   const [repDiscipline, setRepDiscipline] = useState('Tổ 1 và Tổ 3 xếp loại Tốt, Tổ 2 có 1 bạn đi trễ, Tổ 4 hoàn thành trực nhật sạch sẽ');
   const [repStudy, setRepStudy] = useState('Học sinh tích cực phát biểu xây dựng bài, các lớp nghề Hàn (Nam) và Kế toán (Nữ) tham gia đầy đủ 100%');
-  const [repRecommendations, setRepRecommendations] = useState('Đề nghị trung tâm kiểm tra lại quạt trần phía cuối lớp học 11A3');
+  const [repRecommendations, setRepRecommendations] = useState('Đề nghị trung tâm kiểm tra lại quạt trần phía cuối lớp học 12A2');
 
   const selectedStudent = students.find(s => s.id === selectedStudentId) || students[0];
 
@@ -170,7 +170,7 @@ export const AiTeacherAssistantView: React.FC = () => {
             <span>Trợ Lý Sư Phạm AI • Gemini 3.7 Flash</span>
           </div>
           <h1 className="text-2xl sm:text-3xl font-black">
-            Trợ Lý Chủ Nhiệm Đắc Lực Lớp 11A3
+            Trợ Lý Chủ Nhiệm Đắc Lực Lớp 12A2
           </h1>
           <p className="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
             Hỗ trợ Cô Võ Thị Thúy Hào tự động hóa soạn thảo nhận xét học bạ, thông báo phụ huynh, thiết kế kịch bản sinh hoạt lớp và báo cáo tuần chuẩn mẫu GDNN-GDTX.
@@ -334,9 +334,9 @@ export const AiTeacherAssistantView: React.FC = () => {
                   onChange={e => setAnnTarget(e.target.value as any)}
                   className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl outline-hidden font-bold text-slate-900 focus:ring-2 focus:ring-blue-500"
                 >
-                  <option value="all">🌐 Toàn thể Lớp 11A3 (41 Học sinh & Quý Phụ huynh)</option>
+                  <option value="all">🌐 Toàn thể Lớp 12A2 (42 Học sinh & Quý Phụ huynh)</option>
                   <option value="bcs">🎖️ Ban Cán Sự Lớp (BCS - Lớp trưởng, Phó, Bí thư, Tổ trưởng)</option>
-                  <option value="parents">👨‍👩‍👧 Phụ Huynh Học Sinh Lớp 11A3</option>
+                  <option value="parents">👨‍👩‍👧 Phụ Huynh Học Sinh Lớp 12A2</option>
                 </select>
               </div>
 
@@ -579,7 +579,7 @@ export const AiTeacherAssistantView: React.FC = () => {
                   <button
                     onClick={() => {
                       createAnnouncement({
-                        title: annTopic || 'Thông báo Lớp 11A3',
+                        title: annTopic || 'Thông báo Lớp 12A2',
                         content: result,
                         category: annTarget === 'bcs' ? 'BAN CÁN SỰ' : annTarget === 'parents' ? 'HỌP PHỤ HUYNH' : 'THÔNG BÁO CHUNG',
                         targetAudience: annTarget === 'bcs' ? 'BCS' : annTarget === 'parents' ? 'PARENTS' : 'ALL',
@@ -600,7 +600,7 @@ export const AiTeacherAssistantView: React.FC = () => {
           </div>
 
           <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
-            <span>GVCN: Võ Thị Thúy Hào • Lớp 11A3</span>
+            <span>GVCN: Võ Thị Thúy Hào • Lớp 12A2</span>
             <span>GDNN-GDTX An Nhơn (2026–2027)</span>
           </div>
         </div>

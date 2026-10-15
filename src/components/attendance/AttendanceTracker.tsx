@@ -66,7 +66,7 @@ export const AttendanceTracker: React.FC = () => {
         <div>
           <div className="flex items-center gap-2 text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">
             <CalendarIcon className="w-4 h-4" />
-            <span>Sổ Điểm Danh Chuyên Cần 11A3</span>
+            <span>Sổ Điểm Danh Chuyên Cần 12A2</span>
           </div>
           <h1 className="text-xl sm:text-2xl font-black text-slate-900">
             Theo Dõi Nề Nếp & Chuyên Cần Hàng Ngày
@@ -122,7 +122,7 @@ export const AttendanceTracker: React.FC = () => {
             <span className="text-[10px] text-slate-400">Đã chấm: {recordedCount}/{students.length}</span>
           </div>
           <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
-            11A3
+            12A2
           </div>
         </div>
 

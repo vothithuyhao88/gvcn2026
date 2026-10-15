@@ -16,7 +16,7 @@ export interface EmulationRankInfo {
 }
 
 /**
- * Quy định xếp loại thi đua & rèn luyện lớp 11A3 (Chuẩn thang điểm 100):
+ * Quy định xếp loại thi đua & rèn luyện lớp 12A2 (Chuẩn thang điểm 100):
  * - Điểm > 85: Xếp loại Tốt
  * - Điểm > 70 đến 85: Xếp loại Khá
  * - Điểm >= 50 đến 70 (> 50): Xếp loại Đạt

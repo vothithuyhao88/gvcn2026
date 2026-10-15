@@ -165,37 +165,37 @@ export const CURATED_AVATARS = {
     {
       id: 'anime-1',
       title: 'Chibi Học sinh Nam đeo kính',
-      url: 'https://api.dicebear.com/7.x/bottts/svg?seed=student11A3boy&backgroundColor=b6e3f4',
+      url: 'https://api.dicebear.com/7.x/bottts/svg?seed=student12A2boy&backgroundColor=b6e3f4',
       tag: 'Robot Chibi'
     },
     {
       id: 'anime-2',
       title: 'Chibi Nữ sinh tóc bím',
-      url: 'https://api.dicebear.com/7.x/bottts/svg?seed=student11A3girl&backgroundColor=ffdfbf',
+      url: 'https://api.dicebear.com/7.x/bottts/svg?seed=student12A2girl&backgroundColor=ffdfbf',
       tag: 'Robot Chibi'
     },
     {
       id: 'anime-3',
       title: 'Avatar Học sinh Hoạt hình 1',
-      url: 'https://api.dicebear.com/7.x/adventurer/svg?seed=GiaHuy11A3&backgroundColor=b6e3f4',
+      url: 'https://api.dicebear.com/7.x/adventurer/svg?seed=GiaHuy12A2&backgroundColor=b6e3f4',
       tag: 'Adventurer'
     },
     {
       id: 'anime-4',
       title: 'Avatar Nữ sinh Hoạt hình 2',
-      url: 'https://api.dicebear.com/7.x/adventurer/svg?seed=MaiPhuong11A3&backgroundColor=ffd5dc',
+      url: 'https://api.dicebear.com/7.x/adventurer/svg?seed=MaiPhuong12A2&backgroundColor=ffd5dc',
       tag: 'Adventurer'
     },
     {
       id: 'anime-5',
       title: 'Avatar Nam sinh Năng động 3',
-      url: 'https://api.dicebear.com/7.x/adventurer/svg?seed=HoangNam11A3&backgroundColor=c0aede',
+      url: 'https://api.dicebear.com/7.x/adventurer/svg?seed=HoangNam12A2&backgroundColor=c0aede',
       tag: 'Adventurer'
     },
     {
       id: 'anime-6',
       title: 'Avatar Nữ sinh Dễ thương 4',
-      url: 'https://api.dicebear.com/7.x/adventurer/svg?seed=ThaoNguyen11A3&backgroundColor=d1d4f9',
+      url: 'https://api.dicebear.com/7.x/adventurer/svg?seed=ThaoNguyen12A2&backgroundColor=d1d4f9',
       tag: 'Adventurer'
     },
     {
@@ -255,7 +255,7 @@ export const AvatarChangeModal: React.FC<AvatarChangeModalProps> = ({
   onClose,
   currentAvatar,
   userName,
-  userRoleTitle = 'Thành viên Lớp 11A3',
+  userRoleTitle = 'Thành viên Lớp 12A2',
   userGender = 'Nam',
   userRole = 'STUDENT',
   onSaveAvatar,
@@ -863,7 +863,7 @@ export const AvatarChangeModal: React.FC<AvatarChangeModalProps> = ({
                 />
                 <div className="min-w-0 flex-1 text-xs">
                   <p className="font-bold text-slate-900 truncate">{userName}</p>
-                  <p className="text-[10px] text-slate-500 truncate">Lớp 11A3 • 2025–2028</p>
+                  <p className="text-[10px] text-slate-500 truncate">Lớp 12A2 • 2024–2027</p>
                 </div>
               </div>
             </div>

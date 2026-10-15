@@ -30,7 +30,7 @@ export const ConnectionHubView: React.FC = () => {
 
   // Simple mock chat messages
   const [messages, setMessages] = useState<{ id: string; sender: string; role: string; content: string; time: string; isMe: boolean }[]>([
-    { id: '1', sender: 'Cô Võ Thị Thúy Hào (GVCN)', role: 'GVCN', content: 'Chào quý phụ huynh và các em học sinh 11A3! Mọi trao đổi về nề nếp và bài tập có thể nhắn trực tiếp tại đây nhé.', time: '08:00', isMe: false },
+    { id: '1', sender: 'Cô Võ Thị Thúy Hào (GVCN)', role: 'GVCN', content: 'Chào quý phụ huynh và các em học sinh 12A2! Mọi trao đổi về nề nếp và bài tập có thể nhắn trực tiếp tại đây nhé.', time: '08:00', isMe: false },
     { id: '2', sender: 'Bác Lê Văn Toàn (PH Mai Phương)', role: 'Phụ huynh', content: 'Kính chào cô Hào, gia đình đã nhận được thông báo họp PHHS đầu năm vào Chủ Nhật này. Cảm ơn cô!', time: '08:30', isMe: false },
     { id: '3', sender: 'Huỳnh Gia Huy (Lớp trưởng)', role: 'Học sinh', content: 'Thưa cô, tổ 1 và tổ 2 hôm nay đã hoàn thành trực nhật sạch sẽ và tắt hết quạt trước khi ra về ạ.', time: '11:45', isMe: false },
   ]);
@@ -95,7 +95,7 @@ export const ConnectionHubView: React.FC = () => {
         <div>
           <div className="flex items-center gap-2 text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">
             <HeartHandshake className="w-4 h-4" />
-            <span>Góc Kết Nối Lớp 11A3</span>
+            <span>Góc Kết Nối Lớp 12A2</span>
           </div>
           <h1 className="text-xl sm:text-2xl font-black text-slate-900">
             Trao Đổi Trực Tuyến & Duyệt Đơn Xin Nghỉ Học
@@ -246,7 +246,7 @@ export const ConnectionHubView: React.FC = () => {
             <div className="flex items-center gap-2.5">
               <div className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse" />
               <div>
-                <h3 className="font-bold text-slate-900 text-xs sm:text-sm">Kênh Trao Đổi Lớp 11A3 (GVCN & Phụ Huynh & Học Sinh)</h3>
+                <h3 className="font-bold text-slate-900 text-xs sm:text-sm">Kênh Trao Đổi Lớp 12A2 (GVCN & Phụ Huynh & Học Sinh)</h3>
                 <p className="text-[11px] text-slate-500">Giữ gìn lời nói chuẩn mực, văn minh trường học</p>
               </div>
             </div>
@@ -295,7 +295,7 @@ export const ConnectionHubView: React.FC = () => {
         <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-xs flex items-center justify-center p-4">
           <div className="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl animate-in zoom-in-95 duration-150">
             <h3 className="font-bold text-slate-900 text-base mb-1">Nộp Đơn Xin Phép Nghỉ Học</h3>
-            <p className="text-xs text-slate-500 mb-4">Gửi đến GVCN: Võ Thị Thúy Hào (Lớp 11A3)</p>
+            <p className="text-xs text-slate-500 mb-4">Gửi đến GVCN: Võ Thị Thúy Hào (Lớp 12A2)</p>
 
             <form onSubmit={handleCreateLeave} className="space-y-3 text-xs">
               {currentUser.role === 'GVCN' && (

@@ -25,7 +25,7 @@ export interface User {
 
 export interface Student {
   id: string;
-  code: string; // e.g. 11A3-01
+  code: string; // e.g. 12A2-01
   fullName: string;
   gender: 'Nam' | 'Nữ';
   dob: string;

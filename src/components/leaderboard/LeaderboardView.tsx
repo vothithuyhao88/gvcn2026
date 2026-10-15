@@ -63,7 +63,7 @@ export const LeaderboardView: React.FC = () => {
         <div>
           <div className="flex items-center gap-2 text-xs font-bold text-amber-600 uppercase tracking-wider mb-1">
             <Award className="w-4 h-4" />
-            <span>Bảng Vinh Danh & Xếp Hạng Lớp 11A3</span>
+            <span>Bảng Vinh Danh & Xếp Hạng Lớp 12A2</span>
           </div>
           <h1 className="text-xl sm:text-2xl font-black text-slate-900">
             Bảng Xếp Hạng Thi Đua & Rèn Luyện
@@ -109,7 +109,7 @@ export const LeaderboardView: React.FC = () => {
             <Sparkles className="w-3.5 h-3.5" />
             <span>Top Hoa Điểm Tốt Tuần Này</span>
           </div>
-          <h2 className="text-xl sm:text-2xl font-black text-white">Gương Mặt Xuất Sắc Lớp 11A3</h2>
+          <h2 className="text-xl sm:text-2xl font-black text-white">Gương Mặt Xuất Sắc Lớp 12A2</h2>
         </div>
 
         {/* Podium cards */}
@@ -268,7 +268,7 @@ export const LeaderboardView: React.FC = () => {
             <div className="flex items-center justify-between mb-4">
               <div>
                 <h3 className="font-bold text-slate-900 text-base">
-                  Bảng Xếp Hạng Toàn Thể {students.length} Học Sinh Lớp 11A3
+                  Bảng Xếp Hạng Toàn Thể {students.length} Học Sinh Lớp 12A2
                 </h3>
                 <p className="text-xs text-slate-500">
                   Cập nhật theo kết quả điểm danh, hoạt động học tập và duyệt thi đua

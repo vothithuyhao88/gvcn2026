@@ -31,6 +31,7 @@ export const StudentDashboardView: React.FC<StudentDashboardViewProps> = ({ onNa
     dutySchedule, 
     announcements, 
     submissions, 
+    moments,
     createLeaveRequest 
   } = useApp();
 
@@ -98,7 +99,7 @@ export const StudentDashboardView: React.FC<StudentDashboardViewProps> = ({ onNa
                   {position}
                 </span>
                 <span className="bg-white/10 text-white text-xs px-2.5 py-0.5 rounded-full">
-                  Tổ {currentStudent.teamId} • Lớp 11A3
+                  Tổ {currentStudent.teamId} • Lớp 12A2
                 </span>
               </div>
               <h1 className="text-xl sm:text-2xl font-black text-white">{currentStudent.fullName}</h1>
@@ -207,7 +208,7 @@ export const StudentDashboardView: React.FC<StudentDashboardViewProps> = ({ onNa
             </div>
             <div>
               <div className="text-xs font-bold uppercase tracking-wider text-emerald-100">Lớp Phó Lao Động & Nề Nếp</div>
-              <h3 className="text-lg font-black text-white">Theo dõi trực nhật và nề nếp lớp 11A3</h3>
+              <h3 className="text-lg font-black text-white">Theo dõi trực nhật và nề nếp lớp 12A2</h3>
               <p className="text-xs text-emerald-100 mt-0.5">
                 Kiểm tra vệ sinh phòng học, phân công trực nhật theo ngày và tắt các thiết bị quạt/điện khi tan học.
               </p>
@@ -425,22 +426,23 @@ export const StudentDashboardView: React.FC<StudentDashboardViewProps> = ({ onNa
             <div className="flex items-center justify-between mb-3">
               <h3 className="font-bold text-slate-900 text-xs uppercase tracking-wider flex items-center gap-1.5">
                 <span>📸</span>
-                <span>Khoảnh Khắc 11A3</span>
+                <span>Khoảnh Khắc 12A2</span>
               </h3>
               <button 
                 onClick={() => onNavigate('moments')}
-                className="text-xs text-blue-600 font-semibold hover:underline"
+                className="text-xs text-blue-600 font-semibold hover:underline cursor-pointer"
               >
-                Xem album
+                Xem album ({moments.length})
               </button>
             </div>
             <img 
-              src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400&auto=format&fit=crop&q=80" 
-              alt="Khoảnh khắc 11A3" 
-              className="w-full h-32 object-cover rounded-2xl"
+              src={moments[0]?.imageUrl || "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400&auto=format&fit=crop&q=80"} 
+              alt={moments[0]?.title || "Khoảnh khắc 12A2"} 
+              className="w-full h-32 object-cover rounded-2xl cursor-pointer hover:opacity-90 transition"
+              onClick={() => onNavigate('moments')}
             />
-            <p className="text-xs text-slate-700 font-medium mt-2">
-              Lớp 11A3 ngày tựu trường năm học 2026 - 2027 ✨
+            <p className="text-xs text-slate-700 font-medium mt-2 line-clamp-1">
+              {moments[0]?.title || "Lớp 12A2 ngày tựu trường năm học 2024 - 2027 ✨"}
             </p>
           </div>
 
@@ -453,7 +455,7 @@ export const StudentDashboardView: React.FC<StudentDashboardViewProps> = ({ onNa
         <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-xs flex items-center justify-center p-4">
           <div className="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl animate-in zoom-in-95 duration-150">
             <h3 className="font-bold text-slate-900 text-base mb-1">Đơn Xin Phép Nghỉ Học Trực Tuyến</h3>
-            <p className="text-xs text-slate-500 mb-4">Gửi đến GVCN: Cô Võ Thị Thúy Hào (Lớp 11A3)</p>
+            <p className="text-xs text-slate-500 mb-4">Gửi đến GVCN: Cô Võ Thị Thúy Hào (Lớp 12A2)</p>
 
             {leaveSuccess ? (
               <div className="p-4 bg-emerald-50 text-emerald-800 rounded-2xl text-center text-xs font-bold">

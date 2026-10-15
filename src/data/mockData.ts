@@ -17,7 +17,7 @@ export const INITIAL_STUDENTS: Student[] = [
   // TỔ 1 (9 học sinh)
   {
     id: 'hs-01',
-    code: '11A3-01',
+    code: '12A2-01',
     fullName: 'Huỳnh Gia Huy',
     gender: 'Nam',
     dob: '2009-03-15',
@@ -36,7 +36,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-02',
-    code: '11A3-02',
+    code: '12A2-02',
     fullName: 'Phạm Hoàng Nam',
     gender: 'Nam',
     dob: '2009-08-22',
@@ -55,7 +55,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-03',
-    code: '11A3-03',
+    code: '12A2-03',
     fullName: 'Nguyễn Thị Ánh Tuyết',
     gender: 'Nữ',
     dob: '2009-11-05',
@@ -74,7 +74,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-04',
-    code: '11A3-04',
+    code: '12A2-04',
     fullName: 'Lê Quốc Bảo',
     gender: 'Nam',
     dob: '2009-05-18',
@@ -92,7 +92,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-05',
-    code: '11A3-05',
+    code: '12A2-05',
     fullName: 'Trần Hoài Phương',
     gender: 'Nữ',
     dob: '2009-02-14',
@@ -110,7 +110,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-06',
-    code: '11A3-06',
+    code: '12A2-06',
     fullName: 'Võ Minh Trí',
     gender: 'Nam',
     dob: '2009-09-30',
@@ -129,7 +129,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-07',
-    code: '11A3-07',
+    code: '12A2-07',
     fullName: 'Đặng Ngọc Yến',
     gender: 'Nữ',
     dob: '2009-07-12',
@@ -147,7 +147,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-08',
-    code: '11A3-08',
+    code: '12A2-08',
     fullName: 'Bùi Đức Anh',
     gender: 'Nam',
     dob: '2009-12-01',
@@ -165,7 +165,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-09',
-    code: '11A3-09',
+    code: '12A2-09',
     fullName: 'Hồ Thị Kim Ngân',
     gender: 'Nữ',
     dob: '2009-04-25',
@@ -185,7 +185,7 @@ export const INITIAL_STUDENTS: Student[] = [
   // TỔ 2 (9 học sinh)
   {
     id: 'hs-10',
-    code: '11A3-10',
+    code: '12A2-10',
     fullName: 'Lê Nguyễn Mai Phương',
     gender: 'Nữ',
     dob: '2009-06-10',
@@ -204,7 +204,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-11',
-    code: '11A3-11',
+    code: '12A2-11',
     fullName: 'Nguyễn Thị Thảo Nguyên',
     gender: 'Nữ',
     dob: '2009-01-20',
@@ -222,7 +222,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-12',
-    code: '11A3-12',
+    code: '12A2-12',
     fullName: 'Trần Văn Kiệt',
     gender: 'Nam',
     dob: '2009-10-18',
@@ -240,7 +240,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-13',
-    code: '11A3-13',
+    code: '12A2-13',
     fullName: 'Đoàn Thị Bích Trâm',
     gender: 'Nữ',
     dob: '2009-08-08',
@@ -258,7 +258,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-14',
-    code: '11A3-14',
+    code: '12A2-14',
     fullName: 'Phan Minh Tuấn',
     gender: 'Nam',
     dob: '2009-04-03',
@@ -278,7 +278,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-15',
-    code: '11A3-15',
+    code: '12A2-15',
     fullName: 'Lâm Mỹ Duyên',
     gender: 'Nữ',
     dob: '2009-12-19',
@@ -296,7 +296,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-16',
-    code: '11A3-16',
+    code: '12A2-16',
     fullName: 'Ngô Thanh Tùng',
     gender: 'Nam',
     dob: '2009-09-09',
@@ -314,7 +314,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-17',
-    code: '11A3-17',
+    code: '12A2-17',
     fullName: 'Trương Ngọc Hân',
     gender: 'Nữ',
     dob: '2009-03-28',
@@ -332,7 +332,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-18',
-    code: '11A3-18',
+    code: '12A2-18',
     fullName: 'Đặng Hoàng Khang',
     gender: 'Nam',
     dob: '2009-07-04',
@@ -352,7 +352,7 @@ export const INITIAL_STUDENTS: Student[] = [
   // TỔ 3 (9 học sinh)
   {
     id: 'hs-19',
-    code: '11A3-19',
+    code: '12A2-19',
     fullName: 'Trần Minh Khang',
     gender: 'Nam',
     dob: '2009-05-02',
@@ -371,7 +371,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-20',
-    code: '11A3-20',
+    code: '12A2-20',
     fullName: 'Đỗ Quang Minh',
     gender: 'Nam',
     dob: '2009-11-15',
@@ -389,7 +389,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-21',
-    code: '11A3-21',
+    code: '12A2-21',
     fullName: 'Nguyễn Hoàng Thảo',
     gender: 'Nữ',
     dob: '2009-02-27',
@@ -407,7 +407,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-22',
-    code: '11A3-22',
+    code: '12A2-22',
     fullName: 'Vũ Đức Thịnh',
     gender: 'Nam',
     dob: '2009-08-19',
@@ -425,7 +425,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-23',
-    code: '11A3-23',
+    code: '12A2-23',
     fullName: 'Trần Thị Cẩm Tú',
     gender: 'Nữ',
     dob: '2009-10-09',
@@ -443,7 +443,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-24',
-    code: '11A3-24',
+    code: '12A2-24',
     fullName: 'Nguyễn Thành Long',
     gender: 'Nam',
     dob: '2009-01-11',
@@ -463,7 +463,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-25',
-    code: '11A3-25',
+    code: '12A2-25',
     fullName: 'Đặng Thị Thu Hiền',
     gender: 'Nữ',
     dob: '2009-04-14',
@@ -481,7 +481,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-26',
-    code: '11A3-26',
+    code: '12A2-26',
     fullName: 'Lý Quốc Huy',
     gender: 'Nam',
     dob: '2009-07-21',
@@ -499,7 +499,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-27',
-    code: '11A3-27',
+    code: '12A2-27',
     fullName: 'Phạm Thị Quỳnh Như',
     gender: 'Nữ',
     dob: '2009-12-05',
@@ -519,7 +519,7 @@ export const INITIAL_STUDENTS: Student[] = [
   // TỔ 4 (8 học sinh)
   {
     id: 'hs-28',
-    code: '11A3-28',
+    code: '12A2-28',
     fullName: 'Võ Hải Đăng',
     gender: 'Nam',
     dob: '2009-09-14',
@@ -537,7 +537,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-29',
-    code: '11A3-29',
+    code: '12A2-29',
     fullName: 'Trần Thị Ngọc Bích',
     gender: 'Nữ',
     dob: '2009-03-03',
@@ -555,7 +555,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-30',
-    code: '11A3-30',
+    code: '12A2-30',
     fullName: 'Lê Tấn Phát',
     gender: 'Nam',
     dob: '2009-06-25',
@@ -573,7 +573,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-31',
-    code: '11A3-31',
+    code: '12A2-31',
     fullName: 'Dương Thúy Hằng',
     gender: 'Nữ',
     dob: '2009-10-30',
@@ -591,7 +591,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-32',
-    code: '11A3-32',
+    code: '12A2-32',
     fullName: 'Nguyễn Tấn Đạt',
     gender: 'Nam',
     dob: '2009-01-08',
@@ -609,7 +609,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-33',
-    code: '11A3-33',
+    code: '12A2-33',
     fullName: 'Hoàng Kim Chi',
     gender: 'Nữ',
     dob: '2009-05-19',
@@ -627,7 +627,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-34',
-    code: '11A3-34',
+    code: '12A2-34',
     fullName: 'Mai Đức Trọng',
     gender: 'Nam',
     dob: '2009-08-11',
@@ -645,7 +645,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-35',
-    code: '11A3-35',
+    code: '12A2-35',
     fullName: 'Cao Thị Diệu Linh',
     gender: 'Nữ',
     dob: '2009-12-28',
@@ -663,7 +663,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-36',
-    code: '11A3-36',
+    code: '12A2-36',
     fullName: 'Trịnh Bảo Long',
     gender: 'Nam',
     dob: '2009-02-14',
@@ -681,7 +681,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-37',
-    code: '11A3-37',
+    code: '12A2-37',
     fullName: 'Võ Thị Hồng Nhung',
     gender: 'Nữ',
     dob: '2009-06-17',
@@ -699,7 +699,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-38',
-    code: '11A3-38',
+    code: '12A2-38',
     fullName: 'Nguyễn Đăng Khoa',
     gender: 'Nam',
     dob: '2009-09-05',
@@ -717,7 +717,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-39',
-    code: '11A3-39',
+    code: '12A2-39',
     fullName: 'Bùi Thị Tuyết Mai',
     gender: 'Nữ',
     dob: '2009-11-20',
@@ -735,7 +735,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-40',
-    code: '11A3-40',
+    code: '12A2-40',
     fullName: 'Đinh Công Thành',
     gender: 'Nam',
     dob: '2009-04-22',
@@ -753,7 +753,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'hs-41',
-    code: '11A3-41',
+    code: '12A2-41',
     fullName: 'Phan Ngọc Uyên',
     gender: 'Nữ',
     dob: '2009-07-30',
@@ -768,6 +768,24 @@ export const INITIAL_STUDENTS: Student[] = [
     baseScore: 100,
     currentScore: 112,
     avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80',
+  },
+  {
+    id: 'hs-42',
+    code: '12A2-42',
+    fullName: 'Võ Hoàng Phúc',
+    gender: 'Nam',
+    dob: '2009-10-12',
+    address: 'Phường Đập Đá, TX. An Nhơn',
+    phone: '0967 889 900',
+    teamId: 1,
+    position: 'THÀNH VIÊN',
+    parentName: 'Võ Văn Hùng',
+    parentPhone: '0912 778 990',
+    parentRelationship: 'Bố',
+    vocationalCourse: 'Hàn',
+    baseScore: 100,
+    currentScore: 100,
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
   },
 ];
 
@@ -875,7 +893,7 @@ export const INITIAL_ANNOUNCEMENTS: Announcement[] = [
   {
     id: 'ann-01',
     title: '📢 Kế hoạch Họp Phụ Huynh Đầu Năm & Triển khai Học Nghề Song Hành',
-    content: 'Kính gửi Quý Phụ huynh lớp 11A3. Nhà trường trân trọng kính mời Quý phụ huynh tham dự buổi họp phụ huynh đầu năm học 2026-2027 vào lúc 08h00 Chủ Nhật (ngày 30/08/2026) tại phòng học số 04. Nội dung: Đánh giá tình hình đầu năm, thống nhất kế hoạch liên kết đào tạo nghề Trung cấp song hành (Nam học Hàn, Nữ học Kế toán) và thành lập Ban đại diện CMHS lớp.',
+    content: 'Kính gửi Quý Phụ huynh lớp 12A2. Nhà trường trân trọng kính mời Quý phụ huynh tham dự buổi họp phụ huynh đầu năm học 2026-2027 vào lúc 08h00 Chủ Nhật (ngày 30/08/2026) tại phòng học số 04. Nội dung: Đánh giá tình hình đầu năm, thống nhất kế hoạch liên kết đào tạo nghề Trung cấp song hành (Nam học Hàn, Nữ học Kế toán) và thành lập Ban đại diện CMHS lớp.',
     category: 'HỌP PHỤ HUYNH',
     targetAudience: 'PARENTS',
     createdAt: '2026-08-25T08:30:00Z',
@@ -883,14 +901,14 @@ export const INITIAL_ANNOUNCEMENTS: Announcement[] = [
     important: true,
     readBy: ['user-gvcn', 'user-parent-1', 'user-parent-2'],
     attachments: [
-      { name: 'Ke_hoach_Hop_PHHS_11A3.pdf', size: '245 KB' },
+      { name: 'Ke_hoach_Hop_PHHS_12A2.pdf', size: '245 KB' },
       { name: 'Chuong_trinh_Hoc_Nghe_Trung_Cap.pdf', size: '1.2 MB' }
     ]
   },
   {
     id: 'ann-02',
     title: '🏆 Phát động Phong trào Thi đua "Hoa Điểm Tốt" & Giữ Gìn Vệ Sinh Lớp Học',
-    content: 'Chào các em 11A3! Bắt đầu từ tuần này, lớp chúng ta chính thức áp dụng bảng thang điểm thi đua mới. Các Tổ trưởng sẽ theo dõi và chấm điểm các thành viên theo đúng quy định. Ban cán sự sẽ tổng hợp và trình GVCN phê duyệt vào tiết sinh hoạt thứ 7 hàng tuần. Chúc cả 4 tổ thi đua sôi nổi và gặt hái nhiều điểm cộng!',
+    content: 'Chào các em 12A2! Bắt đầu từ tuần này, lớp chúng ta chính thức áp dụng bảng thang điểm thi đua mới. Các Tổ trưởng sẽ theo dõi và chấm điểm các thành viên theo đúng quy định. Ban cán sự sẽ tổng hợp và trình GVCN phê duyệt vào tiết sinh hoạt thứ 7 hàng tuần. Chúc cả 4 tổ thi đua sôi nổi và gặt hái nhiều điểm cộng!',
     category: 'PHONG TRÀO',
     targetAudience: 'ALL',
     createdAt: '2026-08-24T14:15:00Z',
@@ -898,13 +916,13 @@ export const INITIAL_ANNOUNCEMENTS: Announcement[] = [
     important: true,
     readBy: ['user-gvcn', 'user-loptruong', 'user-loppho-ht', 'user-totruong-1'],
     attachments: [
-      { name: 'Thang_Diem_Thi_Dua_11A3.pdf', size: '180 KB' }
+      { name: 'Thang_Diem_Thi_Dua_12A2.pdf', size: '180 KB' }
     ]
   },
   {
     id: 'ann-03',
     title: '🎖️ Triệu tập Họp Ban Cán Sự Lớp (Lớp trưởng, Lớp phó, 4 Tổ trưởng, Bí thư)',
-    content: 'Cô Thúy Hào triệu tập Ban Cán sự lớp 11A3 (gồm Lớp trưởng Nguyễn Văn An, 2 Lớp phó, Bí thư Chi đoàn và 4 Tổ trưởng) họp nhanh vào 15 phút đầu giờ sáng Thứ Sáu tại bàn giáo viên. Nội dung: Rà soát việc chấm điểm thi đua nề nếp của các tổ, phân công quản lý giờ tự học và chuẩn bị báo cáo tuần.',
+    content: 'Cô Thúy Hào triệu tập Ban Cán sự lớp 12A2 (gồm Lớp trưởng Nguyễn Văn An, 2 Lớp phó, Bí thư Chi đoàn và 4 Tổ trưởng) họp nhanh vào 15 phút đầu giờ sáng Thứ Sáu tại bàn giáo viên. Nội dung: Rà soát việc chấm điểm thi đua nề nếp của các tổ, phân công quản lý giờ tự học và chuẩn bị báo cáo tuần.',
     category: 'BAN CÁN SỰ',
     targetAudience: 'BCS',
     createdAt: '2026-08-26T07:30:00Z',
@@ -954,7 +972,7 @@ export const INITIAL_DUTY_SCHEDULE: DutySchedule[] = [
     teamId: 2,
     assignedLeader: 'Nguyễn Thị Thảo Nguyên',
     tasks: ['Tổng vệ sinh cuối tuần', 'Sắp xếp lại tủ sách lớp', 'Bàn giao phòng học'],
-    notes: 'Tổng vệ sinh kỹ toàn bộ phòng học 11A3.'
+    notes: 'Tổng vệ sinh kỹ toàn bộ phòng học 12A2.'
   }
 ];
 
@@ -964,7 +982,7 @@ export const INITIAL_DIARIES: HomeroomDiary[] = [
     date: '2026-08-25',
     title: 'Ổn định nề nếp tuần đầu & Bầu Ban cán sự lâm thời',
     category: 'Nề nếp',
-    content: 'Lớp 11A3 đã kiện toàn bộ máy Ban cán sự: Em Huỳnh Gia Huy làm Lớp trưởng, em Mai Phương (LP Học tập), em Minh Khang (LP Lao động), cùng 4 Tổ trưởng phụ trách 4 tổ. Đa số học sinh đi học đúng giờ, tác phong nghiêm túc.',
+    content: 'Lớp 12A2 đã kiện toàn bộ máy Ban cán sự: Em Huỳnh Gia Huy làm Lớp trưởng, em Mai Phương (LP Học tập), em Minh Khang (LP Lao động), cùng 4 Tổ trưởng phụ trách 4 tổ. Đa số học sinh đi học đúng giờ, tác phong nghiêm túc.',
     involvedStudents: ['Huỳnh Gia Huy', 'Lê Nguyễn Mai Phương', 'Trần Minh Khang'],
     actionTaken: 'Phân công nhiệm vụ cụ thể cho từng cán sự, bàn giao sổ theo dõi thi đua.',
     createdAt: '2026-08-25T16:00:00Z',
@@ -984,8 +1002,8 @@ export const INITIAL_DIARIES: HomeroomDiary[] = [
 export const INITIAL_MOMENTS: ClassMoment[] = [
   {
     id: 'moment-01',
-    title: 'Lớp 11A3 ngày tựu trường năm học 2026 - 2027 ✨',
-    description: 'Năm học mới tràn đầy hứng khởi của đại gia đình 11A3! Chúc các em luôn đoàn kết, tự tin và bứt phá mạnh mẽ!',
+    title: 'Lớp 12A2 ngày tựu trường năm học 2026 - 2027 ✨',
+    description: 'Năm học mới tràn đầy hứng khởi của đại gia đình 12A2! Chúc các em luôn đoàn kết, tự tin và bứt phá mạnh mẽ!',
     imageUrl: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&auto=format&fit=crop&q=80',
     date: '2026-08-22',
     author: 'Cô Võ Thị Thúy Hào',
@@ -996,7 +1014,7 @@ export const INITIAL_MOMENTS: ClassMoment[] = [
         id: 'c-1',
         userName: 'Huỳnh Gia Huy (Lớp trưởng)',
         userRole: 'Học sinh',
-        content: '11A3 quyết tâm giành giải Nhất phong trào thi đua năm nay cô nhé! 🔥',
+        content: '12A2 quyết tâm giành giải Nhất phong trào thi đua năm nay cô nhé! 🔥',
         time: '2 ngày trước'
       },
       {
@@ -1041,7 +1059,7 @@ export const INITIAL_DOCUMENTS: ClassDocument[] = [
   },
   {
     id: 'doc-01',
-    title: 'Nội quy và Thang điểm Thi đua Lớp 11A3 (Năm học 2026-2027)',
+    title: 'Nội quy và Thang điểm Thi đua Lớp 12A2 (Năm học 2026-2027)',
     category: 'Nội quy & Thi đua',
     uploadedAt: '2026-08-20',
     fileSize: '350 KB',

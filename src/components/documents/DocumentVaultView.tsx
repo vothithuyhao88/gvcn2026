@@ -50,7 +50,7 @@ export const DocumentVaultView: React.FC = () => {
       fileSize: '1.2 MB',
       fileType: 'pdf',
       downloadUrl: '#',
-      description: newDesc || 'Tài liệu sinh hoạt học tập lớp 11A3',
+      description: newDesc || 'Tài liệu sinh hoạt học tập lớp 12A2',
     });
 
     setIsAddModalOpen(false);
@@ -66,7 +66,7 @@ export const DocumentVaultView: React.FC = () => {
         <div>
           <div className="flex items-center gap-2 text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">
             <FolderDown className="w-4 h-4" />
-            <span>Tài Liệu & Lịch Học Lớp 11A3</span>
+            <span>Tài Liệu & Lịch Học Lớp 12A2</span>
           </div>
           <h1 className="text-xl sm:text-2xl font-black text-slate-900">
             Kho Biểu Mẫu, Thời Khóa Biểu & Lịch Học Nghề
@@ -177,7 +177,7 @@ export const DocumentVaultView: React.FC = () => {
       {isAddModalOpen && (
         <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-xs flex items-center justify-center p-4">
           <div className="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl animate-in zoom-in-95 duration-150">
-            <h3 className="font-bold text-slate-900 text-lg mb-1">Tải Lên Tài Liệu Lớp 11A3</h3>
+            <h3 className="font-bold text-slate-900 text-lg mb-1">Tải Lên Tài Liệu Lớp 12A2</h3>
             <p className="text-xs text-slate-500 mb-4">Chia sẻ biểu mẫu, thời khóa biểu hoặc đề cương</p>
 
             <form onSubmit={handleAddDoc} className="space-y-3 text-xs">

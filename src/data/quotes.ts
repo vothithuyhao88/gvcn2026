@@ -52,7 +52,7 @@ export const INSPIRATIONAL_STUDY_QUOTES: StudyQuote[] = [
   },
   {
     quote: 'Rèn đức luyện tài, quyết tâm vươn lên xây dựng ước mơ và lập nghiệp.',
-    authorOrSource: 'Khẩu hiệu thi đua Lớp 11A3',
+    authorOrSource: 'Khẩu hiệu thi đua Lớp 12A2',
     category: 'danh-ngon'
   }
 ];

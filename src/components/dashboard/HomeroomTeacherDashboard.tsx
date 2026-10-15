@@ -204,7 +204,7 @@ export const HomeroomTeacherDashboard: React.FC<HomeroomTeacherDashboardProps> =
     setContactType(type);
     setCopiedSms(false);
     setSmsContent(
-      `Kính gửi phụ huynh em ${student.fullName} (Lớp 11A3 - Trung tâm GDNN-GDTX An Nhơn). Cô Võ Thị Thúy Hào (GVCN) trân trọng thông báo về tình hình rèn luyện và nề nếp của em: Điểm thi đua hiện tại ${student.currentScore}đ. Kính đề nghị Quý Phụ huynh phối hợp cùng nhà trường đôn đốc em đi học chuyên cần và chuẩn bị bài vở đầy đủ. Trân trọng!`
+      `Kính gửi phụ huynh em ${student.fullName} (Lớp 12A2 - Trung tâm GDNN-GDTX An Nhơn). Cô Võ Thị Thúy Hào (GVCN) trân trọng thông báo về tình hình rèn luyện và nề nếp của em: Điểm thi đua hiện tại ${student.currentScore}đ. Kính đề nghị Quý Phụ huynh phối hợp cùng nhà trường đôn đốc em đi học chuyên cần và chuẩn bị bài vở đầy đủ. Trân trọng!`
     );
   };
 
@@ -260,7 +260,7 @@ export const HomeroomTeacherDashboard: React.FC<HomeroomTeacherDashboardProps> =
               </div>
 
               <h1 className="text-xl sm:text-2xl font-black text-white tracking-tight flex items-center gap-2">
-                <span>Lớp 11A3 • GVCN Cô Võ Thị Thúy Hào</span>
+                <span>Lớp 12A2 • GVCN Cô Võ Thị Thúy Hào</span>
               </h1>
 
               {/* Châm ngôn & Ca dao tục ngữ khuyến khích tinh thần học tập */}
@@ -711,7 +711,7 @@ export const HomeroomTeacherDashboard: React.FC<HomeroomTeacherDashboardProps> =
           <div className="p-8 text-center bg-slate-50 rounded-2xl border border-slate-200/60">
             <CheckCircle2 className="w-10 h-10 text-emerald-500 mx-auto mb-2" />
             <h4 className="font-bold text-slate-800 text-sm">Hôm nay không có vi phạm nề nếp nghiêm trọng nào!</h4>
-            <p className="text-xs text-slate-500 mt-1">Lớp 11A3 duy trì tốt sĩ số và nề nếp 15 phút đầu giờ.</p>
+            <p className="text-xs text-slate-500 mt-1">Lớp 12A2 duy trì tốt sĩ số và nề nếp 15 phút đầu giờ.</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

@@ -51,7 +51,7 @@ export const ParentsManager: React.FC = () => {
         <div>
           <div className="flex items-center gap-2 text-xs font-bold text-emerald-600 uppercase tracking-wider mb-1">
             <HeartHandshake className="w-4 h-4" />
-            <span>Ban Đại Diện & Danh Sách Phụ Huynh Lớp 11A3</span>
+            <span>Ban Đại Diện & Danh Sách Phụ Huynh Lớp 12A2</span>
           </div>
           <h1 className="text-xl sm:text-2xl font-black text-slate-900">
             Quản Lý Kết Nối Phụ Huynh Học Sinh
